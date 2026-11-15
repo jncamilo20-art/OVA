@@ -1,0 +1,1505 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVA: Entropía y Neguentropía en los Sistemas | TGS - Universidad Simón Bolívar</title>
+
+  <!-- Tipografía moderna Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos del proyecto (CSS Modular) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MARCAS DE FONDO REPRESENTATIVAS: TEORÍA DE SISTEMAS Y ROBOT CIBERNÉTICO -->
+  <div class="bg-systems-grid" aria-hidden="true">
+    <svg class="bg-systems-svg" viewBox="0 0 1400 1000" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="bgLineGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.15" />
+        </linearGradient>
+        <linearGradient id="bgLineGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#10b981" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.2" />
+        </linearGradient>
+      </defs>
+      <!-- Red Cibernética de Nodos Sistémicos -->
+      <circle cx="160" cy="220" r="140" fill="none" stroke="url(#bgLineGrad1)" stroke-width="2" stroke-dasharray="8 6" />
+      <circle cx="160" cy="220" r="90" fill="rgba(6, 182, 212, 0.04)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1.5" />
+      <circle cx="1220" cy="300" r="170" fill="none" stroke="url(#bgLineGrad2)" stroke-width="2" stroke-dasharray="10 8" />
+      <circle cx="1220" cy="300" r="110" fill="rgba(16, 185, 129, 0.04)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1.5" />
+      <circle cx="1180" cy="780" r="130" fill="none" stroke="rgba(139, 92, 246, 0.28)" stroke-width="2" stroke-dasharray="6 6" />
+      
+      <!-- Líneas de flujo de información neguentrópica -->
+      <line x1="160" y1="220" x2="350" y2="480" stroke="rgba(6, 182, 212, 0.22)" stroke-width="2" stroke-dasharray="6 4" />
+      <line x1="350" y1="480" x2="1220" y2="300" stroke="rgba(16, 185, 129, 0.18)" stroke-width="1.5" />
+      <line x1="1220" y1="300" x2="1180" y2="780" stroke="rgba(251, 191, 36, 0.22)" stroke-width="1.5" stroke-dasharray="8 6" />
+      
+      <!-- Nodos de Entrada, Proceso, Salida y Retroalimentación -->
+      <circle cx="160" cy="220" r="10" fill="#06b6d4" opacity="0.6" />
+      <circle cx="350" cy="480" r="8" fill="#8b5cf6" opacity="0.5" />
+      <circle cx="1220" cy="300" r="12" fill="#10b981" opacity="0.6" />
+      <circle cx="1180" cy="780" r="9" fill="#fbbf24" opacity="0.6" />
+    </svg>
+
+    <!-- ROBOT CIBERNÉTICO EN EL FONDO DERECHO (RoboTGS) -->
+    <div class="bg-robot-watermark-right">
+      <svg viewBox="0 0 240 300" fill="none" stroke="currentColor">
+        <!-- Antena con pulso cibernético -->
+        <line x1="120" y1="55" x2="120" y2="18" stroke="#06b6d4" stroke-width="4" stroke-linecap="round" />
+        <circle cx="120" cy="14" r="10" fill="#fbbf24" stroke="#06b6d4" stroke-width="2" />
+        <circle cx="120" cy="14" r="18" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.7" />
+        <!-- Orejas receptoras / sensores -->
+        <rect x="25" y="80" width="16" height="36" rx="6" fill="#8b5cf6" stroke="#06b6d4" stroke-width="2" />
+        <rect x="199" y="80" width="16" height="36" rx="6" fill="#8b5cf6" stroke="#06b6d4" stroke-width="2" />
+        <!-- Cabeza del robot -->
+        <rect x="38" y="55" width="164" height="105" rx="24" fill="rgba(15, 23, 42, 0.85)" stroke="#06b6d4" stroke-width="3.5" />
+        <!-- Visor digital luminoso -->
+        <rect x="54" y="75" width="132" height="48" rx="14" fill="rgba(6, 182, 212, 0.22)" stroke="#06b6d4" stroke-width="2" />
+        <!-- Ojos cibernéticos expresivos -->
+        <ellipse cx="88" cy="98" rx="14" ry="12" fill="#06b6d4" />
+        <ellipse cx="152" cy="98" rx="14" ry="12" fill="#06b6d4" />
+        <circle cx="92" cy="94" r="4" fill="#ffffff" />
+        <circle cx="156" cy="94" r="4" fill="#ffffff" />
+        <!-- Sonrisa cibernética / indicador -->
+        <path d="M 94 138 Q 120 152 146 138" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
+        <!-- Cuello -->
+        <rect x="100" y="160" width="40" height="15" rx="4" fill="#334155" stroke="#06b6d4" stroke-width="2" />
+        <!-- Torso con procesador de Teoría de Sistemas -->
+        <rect x="30" y="175" width="180" height="110" rx="22" fill="rgba(15, 23, 42, 0.85)" stroke="#8b5cf6" stroke-width="3" />
+        <!-- Reactor / Bucle de Homeostasis en el pecho -->
+        <circle cx="120" cy="225" r="32" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 4" />
+        <text x="96" y="231" fill="#fbbf24" font-family="JetBrains Mono" font-size="15" font-weight="900">−ΔS</text>
+        <!-- Brazos cibernéticos -->
+        <path d="M 30 195 C 10 215, 10 245, 28 260" stroke="#06b6d4" stroke-width="5" stroke-linecap="round" fill="none" />
+        <path d="M 210 195 C 230 215, 230 245, 212 260" stroke="#06b6d4" stroke-width="5" stroke-linecap="round" fill="none" />
+        <text x="46" y="272" fill="#06b6d4" font-family="Inter, sans-serif" font-size="11" font-weight="800" letter-spacing="1">ROBOT TGS · USB</text>
+      </svg>
+    </div>
+
+    <!-- DIAGRAMA CIBERNÉTICO DE WIENER EN EL FONDO IZQUIERDO -->
+    <div class="bg-systems-watermark-left">
+      <svg viewBox="0 0 240 320" fill="none" stroke="currentColor">
+        <!-- Título Cátedra -->
+        <rect x="15" y="12" width="210" height="34" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="#10b981" stroke-width="2" />
+        <text x="25" y="34" fill="#a7f3d0" font-family="JetBrains Mono" font-size="11" font-weight="800">TEORÍA DE SISTEMAS (TGS)</text>
+        
+        <!-- Bloque Entrada -->
+        <rect x="25" y="65" width="80" height="35" rx="6" fill="rgba(6, 182, 212, 0.2)" stroke="#06b6d4" stroke-width="2" />
+        <text x="36" y="87" fill="#ffffff" font-family="Inter" font-size="11" font-weight="700">ENTRADA</text>
+        
+        <!-- Flecha hacia Sistema -->
+        <line x1="105" y1="82" x2="140" y2="82" stroke="#06b6d4" stroke-width="2.5" marker-end="url(#arrow)" />
+        <path d="M 136 78 L 144 82 L 136 86 Z" fill="#06b6d4" />
+        
+        <!-- Bloque Sistema / Caja Negra -->
+        <rect x="144" y="60" width="82" height="45" rx="8" fill="rgba(139, 92, 246, 0.25)" stroke="#8b5cf6" stroke-width="2.5" />
+        <text x="154" y="82" fill="#fbbf24" font-family="Inter" font-size="11" font-weight="800">SISTEMA</text>
+        <text x="152" y="96" fill="#cbd5e1" font-family="JetBrains Mono" font-size="9">dS/dt ≤ 0</text>
+        
+        <!-- Flecha hacia Salida -->
+        <line x1="185" y1="105" x2="185" y2="145" stroke="#10b981" stroke-width="2.5" />
+        <path d="M 181 140 L 185 148 L 189 140 Z" fill="#10b981" />
+        
+        <!-- Bloque Salida -->
+        <rect x="144" y="148" width="82" height="38" rx="6" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="2" />
+        <text x="162" y="171" fill="#ffffff" font-family="Inter" font-size="11" font-weight="700">SALIDA</text>
+        
+        <!-- Bucle de Retroalimentación Negativa (Wiener) -->
+        <path d="M 144 167 C 65 167, 45 130, 65 105" stroke="#fbbf24" stroke-width="3" stroke-dasharray="6 4" fill="none" />
+        <path d="M 62 110 L 65 100 L 72 108 Z" fill="#fbbf24" />
+        
+        <!-- Sensor / Comparador -->
+        <circle cx="95" cy="167" r="18" fill="rgba(251, 191, 36, 0.25)" stroke="#fbbf24" stroke-width="2" />
+        <text x="89" y="172" fill="#ffffff" font-family="JetBrains Mono" font-size="14" font-weight="900">(−)</text>
+        
+        <!-- Etiquetas sistémicas de Ludwig von Bertalanffy & Wiener -->
+        <rect x="20" y="210" width="200" height="95" rx="10" fill="rgba(15, 23, 42, 0.9)" stroke="#06b6d4" stroke-width="1.5" />
+        <text x="32" y="233" fill="#06b6d4" font-family="Inter" font-size="11" font-weight="800">⚡ HOMEOSTASIS VITAL</text>
+        <text x="32" y="253" fill="#cbd5e1" font-family="Inter" font-size="10">• Entropía: Desorden (ΔS > 0)</text>
+        <text x="32" y="271" fill="#a7f3d0" font-family="Inter" font-size="10">• Neguentropía: Orden (−ΔS)</text>
+        <text x="32" y="289" fill="#fbbf24" font-family="Inter" font-size="10">• Retroalimentación Negativa</text>
+      </svg>
+    </div>
+  </div>
+
+  <canvas id="fx-canvas"></canvas>
+
+  <!-- ==========================================================================
+       BARRA SUPERIOR COMPLETA FIJA / ESTÁTICA EN PANTALLA
+       ========================================================================== -->
+  <div class="sticky-nav-wrapper">
+    <header class="station-header">
+      <div class="container station-header-grid">
+        <a href="#inicio" class="station-brand">
+          <div class="station-title-row">
+            <div class="brand-logo-badge">ΔS</div>
+            <span class="station-name">OVA // Entropía y Neguentropía</span>
+          </div>
+          <span class="station-sub">Tema 19 · Curso de Teoría de Sistemas · Docente: Eddy Ramírez</span>
+        </a>
+
+        <div class="station-hud">
+          <div class="xp-tracker">
+            <div class="xp-meta">
+              <span id="hud-xp-label">0 XP · Rango: Iniciado</span>
+              <span id="hud-xp-percent">0%</span>
+            </div>
+            <div class="xp-bar-track">
+              <div class="xp-bar-fill" id="hud-xp-bar" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="badges-collection">
+            <span class="badge-icon" onclick="inspectBadge('🔥 Entropía Térmica: Segunda Ley de la Termodinámica', 50)">🔥</span>
+            <span class="badge-icon" onclick="inspectBadge('🌱 Neguentropía: Importación de Orden (Schrödinger)', 150)">🌱</span>
+            <span class="badge-icon" onclick="inspectBadge('🔄 Sistema Abierto: Intercambio con el Entorno (Bertalanffy)', 250)">🔄</span>
+            <span class="badge-icon" onclick="inspectBadge('📡 Información como Entropía Negativa (Brillouin / Shannon)', 400)">📡</span>
+            <span class="badge-icon" onclick="inspectBadge('⚖️ Homeostasis: Bucle Cibernético Regulador (Wiener)', 550)">⚖️</span>
+            <span class="badge-icon" onclick="inspectBadge('🛡️ Variedad Requerida (Ross Ashby)', 700)">🛡️</span>
+            <span class="badge-icon" onclick="inspectBadge('💻 Neguentropía en Software: Refactor & CI/CD', 800)">💻</span>
+            <span class="badge-icon" onclick="inspectBadge('📈 Equifinalidad Dinámica', 900)">📈</span>
+            <span class="badge-icon" onclick="inspectBadge('🏅 Medalla de Comandante Neguentrópico', 1000)">🏅</span>
+          </div>
+
+          <button class="sound-btn" id="sound-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- BLOQUE INSTITUCIONAL OFICIAL DE LA UNIVERSIDAD SIMÓN BOLÍVAR -->
+        <a href="#inicio" class="usb-institutional-block" onclick="openModule('inicio'); return false;">
+          <div class="usb-badge-crest">
+            <img class="usb-logo-target usb-brand-logo" src="logo.png" alt="Logo Universidad Simón Bolívar" />
+          </div>
+          <div class="usb-badge-text">
+            <span class="usb-badge-univ">Universidad Simón Bolívar</span>
+            <span class="usb-badge-campus">Campus Cúcuta · TGS</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- SUB-BARRA DE NAVEGACIÓN TEMÁTICA -->
+    <nav class="module-nav-bar">
+      <div class="container">
+        <ul class="module-nav-list">
+          <li class="module-nav-item"><a href="#inicio" class="active">🏠 Principio / Inicio <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#modelo-termodinamico">1.1 Flujo Entrópico E-P-S-R <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#taller-clasificacion">1.2 Taller Entropía vs Neguentropía <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#fundamentos-teoricos">2.1 Fundamentos & Leyes <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#casos-reales">2.2 Casos Reales Comparativos <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#casos-decisiones">3.1 Toma de Decisiones <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#laboratorio-juegos">🕹️ Laboratorio & Simulador <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#videos-espanol">📺 Videos en Español <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#prueba-comandante">🎖️ Prueba Evaluativa <span class="check-mark">✓</span></a></li>
+          <li class="module-nav-item"><a href="#cierre-sistemico">📜 Síntesis & Cierre <span class="check-mark">✓</span></a></li>
+        </ul>
+
+        <!-- BARRA DE ACCESIBILIDAD Y UTILIDADES -->
+        <div class="a11y-toolbar" aria-label="Herramientas de accesibilidad y ficha técnica">
+          <button type="button" class="a11y-btn a11y-icon-btn" id="theme-toggle-btn" onclick="toggleThemeMode()" aria-label="Cambiar tema claro/oscuro">🌙</button>
+          <button type="button" class="a11y-btn a11y-icon-btn" id="font-dec-btn" onclick="adjustFontSize(-1)" aria-label="Reducir tamaño de letra">A-</button>
+          <button type="button" class="a11y-btn a11y-icon-btn" id="font-inc-btn" onclick="adjustFontSize(1)" aria-label="Aumentar tamaño de letra">A+</button>
+          <button type="button" class="a11y-btn a11y-pill-btn" id="voice-toggle-btn" onclick="toggleVoiceNarration()" aria-label="Leer o detener narración por voz">🔊 Leer Voz</button>
+          <button type="button" class="a11y-btn a11y-pill-btn a11y-ficha-btn" id="ficha-tecnica-btn" onclick="openFichaTecnica()" aria-label="Abrir Ficha Técnica del OVA">📄 Ficha Técnica</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ==========================================================================
+       1. ABORDAJE (HERO SECTION) // TEMA 19
+       ========================================================================== -->
+  <section class="section" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="unit-tag">TEMA 19 · TEORÍA GENERAL DE SISTEMAS</div>
+          <h1 class="section-title" style="font-size: 2.8rem; line-height: 1.15; margin-bottom: 1.25rem;">
+            Entropía y Neguentropía:<br>
+            <span style="color: var(--neon-cyan);">El Pulso Vital del Orden Sistémico</span>
+          </h1>
+          <p class="hero-lead">
+            ¿Por qué todo sistema aislado está condenado a la muerte térmica y el caos? 
+            En este Objeto Virtual de Aprendizaje explorarás cómo la <strong>entropía (ΔS > 0)</strong> 
+            representa la degradación natural, y cómo los <strong>sistemas abiertos</strong> importan 
+            <strong>neguentropía (información y energía)</strong> del entorno para conservar su organización, 
+            homeostasis y viabilidad en el tiempo.
+          </p>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="#modelo-termodinamico" class="btn btn-gradient" onclick="openModule('modelo-termodinamico'); return false;">Explorar Modelo Termodinámico →</a>
+            <a href="#laboratorio-juegos" class="btn btn-secondary" onclick="openModule('laboratorio-juegos'); return false;">Simulador en Tiempo Real</a>
+          </div>
+
+          <div class="student-badge-card">
+            <div class="student-meta-item">
+              <small>Estudiante Autor</small>
+              <strong>Juan Camilo Ramírez Cáceres</strong>
+            </div>
+            <div class="student-badge-divider"></div>
+            <div class="student-meta-item">
+              <small>Asignatura / Tema</small>
+              <strong>Curso de Teoría de Sistemas // Tema 19</strong>
+            </div>
+            <div class="student-badge-divider"></div>
+            <div class="student-meta-item">
+              <small>Docente</small>
+              <strong>Eddy Ramírez</strong>
+            </div>
+            <div class="student-badge-divider"></div>
+            <div class="student-meta-item student-meta-univ">
+              <div class="usb-student-badge">
+                <img class="usb-logo-target usb-student-logo" src="logo.png" alt="Logo Universidad Simón Bolívar" />
+              </div>
+              <div>
+                <small>Institución</small>
+                <strong>Universidad Simón Bolívar - Campus Cúcuta</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monitor Radial de Estado Entrópico -->
+        <div class="hero-dial-card glass-card">
+          <div class="unit-tag unit-tag-cyan" style="margin-bottom: 1rem;">MONITOR DE ESTADO SISTÉMICO</div>
+          <div class="dial-svg-wrapper">
+            <svg class="dial-svg" viewBox="0 0 200 200">
+              <defs>
+                <linearGradient id="dialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#10b981" />
+                  <stop offset="50%" stop-color="#06b6d4" />
+                  <stop offset="100%" stop-color="#8b5cf6" />
+                </linearGradient>
+              </defs>
+              <circle class="dial-bg" cx="100" cy="100" r="90"></circle>
+              <circle class="dial-bar" id="hero-dial-bar" cx="100" cy="100" r="90"></circle>
+            </svg>
+            <div class="dial-text-box">
+              <span class="dial-num" id="hero-dial-num">65%</span>
+              <span class="dial-sub" id="hero-dial-status">Neguentropía</span>
+            </div>
+          </div>
+
+          <label style="display: block; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            Regular Importación de Información & Energía desde el Entorno:
+          </label>
+          <input type="range" class="cyber-range" id="hero-slider" min="0" max="100" value="65">
+
+          <div id="hero-feedback-text" style="margin-top: 1rem; font-size: 0.85rem; color: #6ee7b7;">
+            ⚡ <strong>Equilibrio Dinámico (Homeostasis):</strong> El sistema absorbe orden y expulsa entropía al medio.
+          </div>
+        </div>
+      </div>
+
+      <!-- ÍNDICE INTERACTIVO DE TEMAS Y MÓDULOS -->
+      <div class="inicio-temas-wrapper" id="inicio-temas-grid">
+        <div class="inicio-temas-header">
+          <div>
+            <div class="unit-tag unit-tag-cyan" style="margin-bottom: 0.45rem;">RUTA DE APRENDIZAJE · TEMA 19</div>
+            <h2 class="inicio-temas-title">Selecciona un Tema para Explorar</h2>
+            <p class="inicio-temas-sub">Haz clic en cualquier módulo para abrir toda su información interactiva. Al terminar, podrás regresar al inicio con un clic.</p>
+          </div>
+        </div>
+
+        <div class="inicio-temas-grid">
+          <button type="button" class="tema-index-card" onclick="openModule('modelo-termodinamico')">
+            <span class="tema-num">1.1</span>
+            <strong class="tema-name">Flujo Entrópico E-P-S-R</strong>
+            <span class="tema-desc">Modelo Entrada, Proceso, Salida y Retroalimentación en sistemas abiertos.</span>
+            <span class="tema-cta">Abrir tema →</span>
+          </button>
+
+          <button type="button" class="tema-index-card" onclick="openModule('taller-clasificacion')">
+            <span class="tema-num">1.2</span>
+            <strong class="tema-name">Taller Entropía vs Neguentropía</strong>
+            <span class="tema-desc">Clasifica fuerzas de desgaste y fuerzas de organización sistémica.</span>
+            <span class="tema-cta">Abrir tema →</span>
+          </button>
+
+          <button type="button" class="tema-index-card" onclick="openModule('fundamentos-teoricos')">
+            <span class="tema-num">2.1</span>
+            <strong class="tema-name">Fundamentos & Leyes</strong>
+            <span class="tema-desc">Segunda Ley de la Termodinámica, Shannon, Wiener y Schrödinger.</span>
+            <span class="tema-cta">Abrir tema →</span>
+          </button>
+
+          <button type="button" class="tema-index-card" onclick="openModule('casos-reales')">
+            <span class="tema-num">2.2</span>
+            <strong class="tema-name">Casos Reales Comparativos</strong>
+            <span class="tema-desc">Sistemas biológicos, organizacionales y tecnológicos frente al caos.</span>
+            <span class="tema-cta">Abrir tema →</span>
+          </button>
+
+          <button type="button" class="tema-index-card" onclick="openModule('casos-decisiones')">
+            <span class="tema-num">3.1</span>
+            <strong class="tema-name">Toma de Decisiones</strong>
+            <span class="tema-desc">Simulación de decisiones gerenciales y técnicas ante crisis entrópicas.</span>
+            <span class="tema-cta">Abrir tema →</span>
+          </button>
+
+          <button type="button" class="tema-index-card tema-card-accent" onclick="openModule('laboratorio-juegos')">
+            <span class="tema-num">LAB</span>
+            <strong class="tema-name">🕹️ Laboratorio & Simulador</strong>
+            <span class="tema-desc">Clasificador de Sistemas (30s) y Simulador de Neguentropía en vivo.</span>
+            <span class="tema-cta">Abrir laboratorio →</span>
+          </button>
+
+          <button type="button" class="tema-index-card" onclick="openModule('videos-espanol')">
+            <span class="tema-num">VID</span>
+            <strong class="tema-name">📺 Videos en Español</strong>
+            <span class="tema-desc">Material audiovisual explicado sobre Entropía y Neguentropía.</span>
+            <span class="tema-cta">Ver videos →</span>
+          </button>
+
+          <button type="button" class="tema-index-card" onclick="openModule('prueba-comandante')">
+            <span class="tema-num">TEST</span>
+            <strong class="tema-name">🎖️ Prueba Evaluativa</strong>
+            <span class="tema-desc">Evaluación de 5 retos para comprobar tu dominio del Tema 19.</span>
+            <span class="tema-cta">Iniciar prueba →</span>
+          </button>
+
+          <button type="button" class="tema-index-card" onclick="openModule('cierre-sistemico')">
+            <span class="tema-num">FIN</span>
+            <strong class="tema-name">📜 Síntesis & Cierre</strong>
+            <span class="tema-desc">Resumen integrador de aprendizaje y asistente RoboTGS.</span>
+            <span class="tema-cta">Ver síntesis →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. MÓDULO 1: MODELO E-P-S-R DEL FLUJO ENTRÓPICO Y NEGANTROPÍA
+       ========================================================================== -->
+  <section class="section" id="modelo-termodinamico">
+    <div class="container">
+      <div class="unit-tag unit-tag-pink">MÓDULO 1 · TEMA 19: TERMODINÁMICA SISTÉMICA</div>
+      <h2 class="section-title pink">El Modelo E-P-S-R de Flujo Entrópico y Neguentrópico</h2>
+      
+      <div class="tip-box">
+        💡 Según Ludwig von Bertalanffy y Erwin Schrödinger: <strong>un sistema abierto sobrevive porque extrae continuamente neguentropía</strong> 
+        (orden, energía e información) de su ambiente para compensar el desgaste de su proceso interno.
+      </div>
+
+      <!-- Diagrama E-P-S-R adaptado estrictamente al Tema 19 -->
+      <div class="epsr-schema-container">
+        <span class="epsr-environment-label">ENTORNO (Ambiente Abierto)</span>
+
+        <div class="epsr-flow-row">
+          <div class="epsr-box box-entrada" onclick="showTopicDetail('entrada')" title="Haz clic para ver la carta de Entrada">
+            ENTRADA (Input)<br>
+            <small style="font-size: 0.75rem; font-weight: 500; opacity: 0.9;">🌱 Inyección Neguentrópica</small>
+          </div>
+          <span class="epsr-arrow">➔</span>
+          <div class="epsr-box box-proceso" onclick="showTopicDetail('proceso')" title="Haz clic para ver la carta de Proceso">
+            PROCESO INTERNO<br>
+            <small style="font-size: 0.75rem; font-weight: 500; opacity: 0.9;">⚙️ Metabolismo & Orden</small>
+          </div>
+          <span class="epsr-arrow">➔</span>
+          <div class="epsr-box box-salida" onclick="showTopicDetail('salida')" title="Haz clic para ver la carta de Salida">
+            SALIDA (Output)<br>
+            <small style="font-size: 0.75rem; font-weight: 500; opacity: 0.9;">🔥 Exportación de Entropía</small>
+          </div>
+        </div>
+
+        <div class="epsr-feedback-loop" onclick="showTopicDetail('feedback')" title="Haz clic para ver la carta de Homeostasis" style="cursor: pointer;">
+          <span class="epsr-feedback-text">RETROALIMENTACIÓN NEGATIVA (HOMEOSTASIS CONTRA EL CAOS) 🔄</span>
+        </div>
+
+        <!-- CARTA VISUAL INTERACTIVA DEL FLUJO -->
+        <div class="epsr-live-card" id="epsr-live-card">
+          <div class="epsr-card-top-bar">
+            <span class="unit-tag unit-tag-cyan" id="epsr-tag">🌱 CARTA DE ENTRADA // INYECCIÓN DE NEGANTROPÍA</span>
+            <div class="epsr-nav-tabs">
+              <button class="epsr-tab-btn active" onclick="showTopicDetail('entrada')">Entrada</button>
+              <button class="epsr-tab-btn" onclick="showTopicDetail('proceso')">Proceso</button>
+              <button class="epsr-tab-btn" onclick="showTopicDetail('salida')">Salida</button>
+              <button class="epsr-tab-btn" onclick="showTopicDetail('feedback')">Feedback</button>
+            </div>
+          </div>
+          <h3 id="epsr-card-title" class="epsr-card-heading">Entrada (Input): Inyección de Neguentropía e Información</h3>
+          <p id="epsr-card-desc" class="epsr-card-text">
+            En la Teoría General de Sistemas de Ludwig von Bertalanffy, todo sistema abierto sobrevive únicamente porque importa continuamente neguentropía de su ambiente exterior. Cada bit de información precisa y cada unidad de energía libre neutraliza la degradación interna y retarda la muerte sistémica.
+          </p>
+          <div class="epsr-card-details-grid" id="epsr-card-details">
+            <div class="epsr-detail-item">
+              <span class="detail-label">⚖️ Principio Físico:</span>
+              <span id="epsr-detail-law">Schrödinger (1944): "El ser vivo se alimenta continuamente de entropía negativa." Flujo termodinámico dₑS &lt; 0.</span>
+            </div>
+            <div class="epsr-detail-item">
+              <span class="detail-label">💻 En Software:</span>
+              <span id="epsr-detail-sw">Requerimientos refinados, parches de seguridad, refactorización periódica y datos validados.</span>
+            </div>
+            <div class="epsr-detail-item">
+              <span class="detail-label">🏢 En Organizaciones:</span>
+              <span id="epsr-detail-org">Inversión de capital, talento humano calificado, estudios de mercado y retroalimentación de clientes.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Tarjetas explicativas enfocadas en Entropía y Neguentropía -->
+      <div class="epsr-cards-grid">
+        <div class="epsr-info-card">
+          <div class="epsr-card-header">
+            <span>📥</span>
+            <span>Importación Neguentrópica</span>
+          </div>
+          <p class="epsr-card-desc">
+            Captación activa de energía libre, nutrientes, datos actualizados y capital humano desde el entorno exterior para neutralizar la degradación.
+          </p>
+        </div>
+
+        <div class="epsr-info-card">
+          <div class="epsr-card-header">
+            <span>⚙️</span>
+            <span>Proceso Organizador</span>
+          </div>
+          <p class="epsr-card-desc">
+            Transformación interna de recursos mediante diferenciación, sinergia y especialización para preservar la estructura y evitar la disolución.
+          </p>
+        </div>
+
+        <div class="epsr-info-card">
+          <div class="epsr-card-header">
+            <span>🔥</span>
+            <span>Evacuación de Entropía</span>
+          </div>
+          <p class="epsr-card-desc">
+            Para mantener baja su propia entropía interna, el sistema abierto exporta calor residual, desechos metabólicos y subproductos degradados al medio.
+          </p>
+        </div>
+
+        <div class="epsr-info-card">
+          <div class="epsr-card-header">
+            <span>🔄</span>
+            <span>Retroalimentación Homeostática</span>
+          </div>
+          <p class="epsr-card-desc">
+            Bucle cibernético (Norbert Wiener) que monitorea desviaciones respecto a la meta e inyecta correcciones para frenar el avance del desorden.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. TALLER DE CLASIFICACIÓN CON SELECTS (ENTROPÍA VS NEGUENTROPÍA)
+       ========================================================================== -->
+  <section class="section" id="taller-clasificacion">
+    <div class="container">
+      <div class="unit-tag unit-tag-cyan">LABORATORIO PRÁCTICO · TEMA 19</div>
+      <h2 class="section-title cyan">Taller de Clasificación: Fenómenos Entrópicos y Neguentrópicos</h2>
+      <p class="section-desc">
+        Analiza cada situación real y determina su naturaleza sistémica exacta: ¿Representa <strong>Generación de Entropía (Caos/Desgaste)</strong>, 
+        <strong>Inyección de Neguentropía (Orden/Información)</strong>, un <strong>Mecanismo Homeostático (Regulación)</strong> o un <strong>Colapso Entrópico</strong>?
+      </p>
+
+      <div class="matching-activity-container">
+        <div class="matching-list">
+
+          <div class="matching-item" data-answer="Generación de Entropía">
+            <span class="matching-label">💻 Software: acumulación de deuda técnica, parches sin pruebas y código espagueti</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Inyección de Neguentropía">
+            <span class="matching-label">💻 Software: refactorización continua basada en SOLID y pipeline automatizado CI/CD</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Generación de Entropía">
+            <span class="matching-label">🏢 Empresa: silos departamentales donde no se comparte información ni metas comunes</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Inyección de Neguentropía">
+            <span class="matching-label">🏢 Empresa: encuestas de clientes y programas de capacitación continua del talento</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Mecanismo Homeostático">
+            <span class="matching-label">🫀 Cuerpo humano: sudoración y vasodilatación para disipar calor al subir la temperatura</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Inyección de Neguentropía">
+            <span class="matching-label">🫀 Cuerpo humano: ingesta de nutrientes ricos en antioxidantes, hidratación y sueño reparador</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Colapso Entrópico">
+            <span class="matching-label">🏭 Fábrica: aislamiento hermético sin compra de materia prima, mantenimiento ni clientes</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Mecanismo Homeostático">
+            <span class="matching-label">🌐 Nube: Circuit Breakers que aíslan microservicios saturados para proteger la red</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Generación de Entropía">
+            <span class="matching-label">⚙️ Servidor: fuga de memoria RAM y acumulación de hilos zombis sin recolección de basura</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+          <div class="matching-item" data-answer="Inyección de Neguentropía">
+            <span class="matching-label">📚 Universidad: actualización curricular de programas de ingeniería según el entorno tecnológico</span>
+            <select class="matching-select">
+              <option value="">Elige categoría...</option>
+              <option value="Generación de Entropía">Generación de Entropía (Caos)</option>
+              <option value="Inyección de Neguentropía">Inyección de Neguentropía (Orden)</option>
+              <option value="Mecanismo Homeostático">Mecanismo Homeostático (Regulación)</option>
+              <option value="Colapso Entrópico">Colapso Entrópico (Muerte Sistémica)</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <button class="btn btn-gradient" onclick="validateTopicMatching()">
+            Verificar Clasificación (+150 XP)
+          </button>
+          <span id="matching-feedback" style="font-weight: 700; font-size: 0.95rem; color: var(--neon-cyan);">
+            Selecciona la categoría termodinámica de cada caso y pulsa verificar.
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. FUNDAMENTOS CONCEPTUALES DEL TEMA 19 (6 TARJETAS TEÓRICAS)
+       ========================================================================== -->
+  <section class="section" id="fundamentos-teoricos">
+    <div class="container">
+      <div class="unit-tag">MÓDULO 2 · TEORÍA SISTÉMICA AVANZADA</div>
+      <h2 class="section-title cyan">Leyes y Principios de la Entropía y Neguentropía</h2>
+      <p class="section-desc">
+        Fundamentación epistemológica de Ludwig von Bertalanffy, Erwin Schrödinger, Norbert Wiener y Léon Brillouin.
+      </p>
+
+      <div class="approaches-grid">
+        <div class="approach-card">
+          <div class="approach-icon">🔥</div>
+          <h3 class="approach-title">Segunda Ley de la Termodinámica (ΔS > 0)</h3>
+          <p class="approach-text">
+            En un sistema aislado, la entropía siempre se incrementa. Toda energía útil se disipa irreversiblemente hacia formas degradadas (muerte térmica).
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-icon">🌱</div>
+          <h3 class="approach-title">Schrödinger y la Entropía Negativa</h3>
+          <p class="approach-text">
+            En <em>"¿Qué es la vida?" (1944)</em>, postuló que el ser viviente evita el decaimiento hacia el equilibrio inerte ingiriendo continuamente <strong>neguentropía</strong>.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-icon">📡</div>
+          <h3 class="approach-title">Información como Neguentropía (I = −ΔS)</h3>
+          <p class="approach-text">
+            Léon Brillouin demostró que la <strong>información equivale a la neguentropía</strong>: cada bit de información precisa reduce la incertidumbre y el caos del sistema.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-icon">🔄</div>
+          <h3 class="approach-title">Termodinámica de Sistemas Abiertos</h3>
+          <p class="approach-text">
+            <strong>ΔS = dᵢS + dₑS</strong>. Mientras que la producción interna siempre es positiva (dᵢS > 0), el intercambio con el entorno (dₑS) puede ser negativo (dₑS &lt; 0), permitiendo mantener el orden.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-icon">⚖️</div>
+          <h3 class="approach-title">Homeostasis Cibernética (Wiener)</h3>
+          <p class="approach-text">
+            La retroalimentación negativa actúa como servomecanismo antientrópico: compara la salida con el estándar óptimo y reprime las oscilaciones desordenadas.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-icon">🛡️</div>
+          <h3 class="approach-title">Variedad Requerida (Ashby) & Equifinalidad</h3>
+          <p class="approach-text">
+            Solo la variedad de control absorbe la variedad de perturbaciones del medio. La equifinalidad asegura llegar al orden deseado por rutas distintas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. CASOS REALES COMPARATIVOS: ANTES VS DESPUÉS (SWITCH DINÁMICO)
+       ========================================================================== -->
+  <section class="section" id="casos-reales">
+    <div class="container">
+      <div class="unit-tag unit-tag-pink">MÓDULO 3 · CONTRASTE SISTÉMICO</div>
+      <h2 class="section-title pink">Casos Reales: Estado Entrópico vs. Neguentrópico</h2>
+      <p class="section-desc">
+        Alterna el interruptor en cada dimensión para contrastar la agonía del desorden frente a la vitalidad del orden y la información.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        
+        <div class="glass-card" id="card-org">
+          <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🏢</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Empresa y Organizaciones</h3>
+          <div class="toggle-container">
+            <div class="toggle-option active entropic" onclick="setCaseState('org', 'entropy', this)">
+              🔴 Entrópico
+            </div>
+            <div class="toggle-option" onclick="setCaseState('org', 'negentropy', this)">
+              🟢 Neguentrópico
+            </div>
+          </div>
+          <div id="content-org">
+            <h4 style="color: #f43f5e; font-size: 0.95rem; margin-bottom: 0.4rem;">Caos y Desorganización</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.8rem;">
+              Silos rígidos, nula comunicación transversal, desmotivación laboral y ceguera ante las demandas del mercado.
+            </p>
+            <span class="unit-tag unit-tag-rose" style="font-size: 0.7rem;">ΔS > 0: Quiebra e Inercia</span>
+          </div>
+        </div>
+
+        <div class="glass-card" id="card-bio">
+          <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🧬</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Sistemas Biológicos</h3>
+          <div class="toggle-container">
+            <div class="toggle-option active entropic" onclick="setCaseState('bio', 'entropy', this)">
+              🔴 Entrópico
+            </div>
+            <div class="toggle-option" onclick="setCaseState('bio', 'negentropy', this)">
+              🟢 Neguentrópico
+            </div>
+          </div>
+          <div id="content-bio">
+            <h4 style="color: #f43f5e; font-size: 0.95rem; margin-bottom: 0.4rem;">Envejecimiento y Degeneración</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.8rem;">
+              Estrés oxidativo, sedentarismo, acumulación de toxinas celulares y pérdida progresiva de la capacidad termorreguladora.
+            </p>
+            <span class="unit-tag unit-tag-rose" style="font-size: 0.7rem;">ΔS > 0: Falla Metabólica</span>
+          </div>
+        </div>
+
+        <div class="glass-card" id="card-soft">
+          <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">💻</div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Ingeniería de Software</h3>
+          <div class="toggle-container">
+            <div class="toggle-option active entropic" onclick="setCaseState('soft', 'entropy', this)">
+              🔴 Entrópico
+            </div>
+            <div class="toggle-option" onclick="setCaseState('soft', 'negentropy', this)">
+              🟢 Neguentrópico
+            </div>
+          </div>
+          <div id="content-soft">
+            <h4 style="color: #f43f5e; font-size: 0.95rem; margin-bottom: 0.4rem;">Deuda Técnica y Spaghetti</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.8rem;">
+              Código no documentado, parches de emergencia sin pruebas, librerías obsoletas y fallos impredecibles en producción.
+            </p>
+            <span class="unit-tag unit-tag-rose" style="font-size: 0.7rem;">ΔS > 0: Software Inmantenible</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. TOMA DE DECISIONES SISTÉMICAS (3 CRISIS REALES)
+       ========================================================================== -->
+  <section class="section" id="casos-decisiones">
+    <div class="container">
+      <div class="unit-tag unit-tag-green">TALLER DE DECISIÓN DE COMANDANTE</div>
+      <h2 class="section-title green">Misiones de Mitigación de Entropía</h2>
+      <p class="section-desc">
+        Elige la estrategia neguentrópica correcta ante cada perturbación del sistema para salvaguardar el orden.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        <div class="glass-card">
+          <span class="unit-tag unit-tag-pink">CRISIS 01 // CRUNCH EN EQUIPO TECH</span>
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Saturación de Entropía en Entregas</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Desarrolladores agotados, bugs críticos recurrentes y reuniones caóticas que no resuelven la causa raíz.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <button class="btn btn-secondary" onclick="openDecision(1, 'A')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              A) Obligar a trabajar horas extra continuas
+            </button>
+            <button class="btn btn-secondary" onclick="openDecision(1, 'B')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              B) Automatizar CI/CD y retrospectivas ágiles
+            </button>
+            <button class="btn btn-secondary" onclick="openDecision(1, 'C')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              C) Eliminar la coordinación del equipo
+            </button>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <span class="unit-tag unit-tag-cyan">CRISIS 02 // COLAPSO ECOLÓGICO</span>
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Eutrofización en Ecosistema Aislado</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Un humedal cerrado acumula materia orgánica, agota el oxígeno y sus especies sufren asfixia.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <button class="btn btn-secondary" onclick="openDecision(2, 'A')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              A) Clausurar el humedal herméticamente
+            </button>
+            <button class="btn btn-secondary" onclick="openDecision(2, 'B')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              B) Vaciar el agua y verter veneno
+            </button>
+            <button class="btn btn-secondary" onclick="openDecision(2, 'C')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              C) Restaurar afluentes abiertos y biorremediación
+            </button>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <span class="unit-tag">CRISIS 03 // INFRAESTRUCTURA CLOUD</span>
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Cascada Entrópica en Microservicios</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Un servicio secundario con lentitud provoca desbordamiento de conexiones en toda la plataforma.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <button class="btn btn-secondary" onclick="openDecision(3, 'A')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              A) Circuit Breakers y observabilidad activa
+            </button>
+            <button class="btn btn-secondary" onclick="openDecision(3, 'B')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              B) Agregar memoria RAM sin tocar el código
+            </button>
+            <button class="btn btn-secondary" onclick="openDecision(3, 'C')" style="text-align: left; justify-content: flex-start; font-size: 0.82rem;">
+              C) Apagar la recopilación de logs de error
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. JUEGOS INTERACTIVOS (100% FUNCIONALES EN JS)
+       ========================================================================== -->
+  <section class="section" id="laboratorio-juegos" style="position: relative; overflow: hidden;">
+    <!-- ROBOCITO DECORATIVO AL FONDO -->
+    <div class="robot-bg-decor" aria-hidden="true">
+      <div class="floating-robot">🤖</div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 0.75rem;">
+        <div class="unit-tag-compact">
+          <span class="icon-10">🎮</span>
+          LABORATORIO GAMIFICADO
+        </div>
+
+        <!-- MASCOTA ASISTENTE ROBOCITO -->
+        <div class="robot-assistant-badge">
+          <span class="robot-icon">🤖</span>
+          <div class="robot-text">
+            <strong>Bot Neguentrópico v2.0</strong>
+            <small>Asistente Sistémico Activo</small>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title cyan">Simulador y Clasificador de Vitalidad Sistémica</h2>
+      <p class="section-desc">
+        Comprueba tus reflejos cognitivos administrando recursos para vencer la Segunda Ley de la Termodinámica en tiempo real con la guía de tu asistente robótico.
+      </p>
+
+      <!-- SELECTOR DE PESTAÑAS PARA LOS JUEGOS -->
+      <div class="games-tab-bar" role="tablist" aria-label="Selector de juegos del laboratorio">
+        <button type="button" class="game-tab-pill active" data-game-tab="1" onclick="switchLabGame(1)">
+          🔬 Juego 1: Clasificador de Sistemas
+        </button>
+        <button type="button" class="game-tab-pill" data-game-tab="2" onclick="switchLabGame(2)">
+          ⚡ Juego 2: Simulador de Neguentropía
+        </button>
+        <button type="button" class="game-tab-pill" data-game-tab="3" onclick="switchLabGame(3)">
+          🧭 Juego 3: Desafío de Acoplamiento
+        </button>
+      </div>
+
+      <div class="games-grid single-view-grid">
+        <div class="game-box" data-game="1">
+          <div class="game-top-bar">
+            <div>
+              <span class="game-tag-micro pink"><span class="micro-dot-10"></span> JUEGO 1</span>
+              <strong style="margin-left: 0.5rem; font-size: 0.95rem;">Clasificador de Sistemas (30s)</strong>
+            </div>
+            <div style="display: flex; gap: 0.8rem;">
+              <span class="game-stat">PUNTOS: <span id="g1-score">0</span></span>
+              <span class="game-stat">TIEMPO: <span id="g1-time">30</span>s</span>
+            </div>
+          </div>
+
+          <div class="game-center-arena">
+            <div id="g1-start-screen">
+              <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.5rem;">
+                Clasifica rápidamente los eventos del entorno: ¿aumentan la <strong>Entropía (Caos)</strong> o inyectan 
+                <strong>Neguentropía (Orden y Vida)</strong>?
+              </p>
+              <button class="btn btn-gradient" onclick="startG1()">Iniciar Ronda (30 Segundos)</button>
+            </div>
+
+            <div id="g1-play-screen" style="display: none; width: 100%;">
+              <div class="game-event-card" id="g1-card">
+                <span id="g1-category" style="font-size: 0.68rem; color: var(--neon-cyan); font-weight: 700;">CATEGORÍA</span>
+                <h4 id="g1-text" style="font-size: 0.98rem; line-height: 1.45; margin-top: 0.35rem; color: #ffffff;">Texto del Evento</h4>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; width: 100%; max-width: 400px; margin: 1rem auto 0;">
+                <button class="btn btn-rose" style="padding: 0.65rem 0.9rem; font-size: 0.84rem;" onclick="answerG1('entropy')">🔴 Entrópico (Caos)</button>
+                <button class="btn btn-green" style="padding: 0.65rem 0.9rem; font-size: 0.84rem;" onclick="answerG1('negentropy')">🟢 Neguentrópico (Orden)</button>
+              </div>
+            </div>
+
+            <div id="g1-end-screen" style="display: none;">
+              <h3 style="font-size: 1.6rem; color: var(--neon-cyan); margin-bottom: 0.5rem;">¡Ronda Concluida!</h3>
+              <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                Puntaje logrado: <strong id="g1-final-score" style="color: #ffffff; font-size: 1.5rem;">0</strong> puntos
+              </p>
+              <button class="btn btn-secondary" onclick="startG1()">Jugar Otra Ronda</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-box game-hidden" data-game="2">
+          <div class="game-top-bar">
+            <div>
+              <span class="game-tag-micro cyan"><span class="micro-dot-10"></span> JUEGO 2</span>
+              <strong style="margin-left: 0.5rem; font-size: 0.95rem;">Simulador de Neguentropía</strong>
+            </div>
+            <div style="display: flex; gap: 0.8rem;">
+              <span class="game-stat">CICLO: <span id="sim-cycle-val">1</span></span>
+              <span class="game-stat">ENERGÍA: <span id="sim-energy-val">100</span>⚡</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.25rem;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">
+                <span>🌱 Neguentropía (Orden & Organización)</span>
+                <span id="sim-neg-text">70%</span>
+              </div>
+              <div class="sim-bar-track">
+                <div class="sim-bar-fill" id="sim-neg-bar" style="width: 70%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 700; color: #fda4af;">
+                <span>💥 Entropía (Desgaste & Caos Térmico)</span>
+                <span id="sim-ent-text">30%</span>
+              </div>
+              <div class="sim-bar-track">
+                <div class="sim-bar-fill" id="sim-ent-bar" style="width: 30%; background: linear-gradient(90deg, #fbbf24, #f43f5e);"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-console" id="sim-console">
+            <div>[00:00] Sistema inicializado en estado de equilibrio dinámico.</div>
+            <div style="color: var(--neon-cyan);">>> Inyecta energía e información para contrarrestar la 2da ley.</div>
+          </div>
+
+          <div class="sim-btn-grid">
+            <button class="sim-btn" id="sbtn-info" onclick="execSimAction('info')">
+              📥 Inyectar Info (-15⚡)
+            </button>
+            <button class="sim-btn" id="sbtn-maint" onclick="execSimAction('maint')">
+              🛠️ Refactorizar (-25⚡)
+            </button>
+            <button class="sim-btn" id="sbtn-feed" onclick="execSimAction('feed')">
+              🔄 Feedback Exterior (-10⚡)
+            </button>
+            <button class="sim-btn" id="sbtn-homeo" onclick="execSimAction('homeo')">
+              ⚖️ Calibrar Homeostasis (-20⚡)
+            </button>
+          </div>
+
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between;">
+            <button class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.78rem;" id="sim-toggle-btn" onclick="toggleSim()">
+              ⏸️ Pausar
+            </button>
+            <button class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.78rem;" onclick="resetSim()">
+              🔄 Reiniciar
+            </button>
+          </div>
+        </div>
+
+        <div class="game-box game-hidden" data-game="3">
+          <div class="game-top-bar">
+            <div>
+              <span class="game-tag-micro cyan"><span class="micro-dot-10"></span> JUEGO 3</span>
+              <strong style="margin-left: 0.5rem; font-size: 0.95rem;">Desafío de Acoplamiento Sistémico</strong>
+            </div>
+            <div style="display: flex; gap: 0.8rem;">
+              <span class="game-stat">RETO: <span id="g3-step">1</span>/5</span>
+              <span class="game-stat">ACIERTOS: <span id="g3-score">0</span></span>
+            </div>
+          </div>
+
+          <div class="game-center-arena">
+            <div id="g3-start-screen">
+              <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.5rem;">
+                Acopla cada sistema en riesgo con el mecanismo <strong>neguentrópico</strong> correcto para restaurar su equilibrio con el entorno.
+              </p>
+              <button class="btn btn-gradient" onclick="startG3()">Iniciar Desafío de Acoplamiento</button>
+            </div>
+
+            <div id="g3-play-screen" style="display: none; width: 100%;">
+              <div class="game-event-card">
+                <span id="g3-system-tag" style="font-size: 0.68rem; color: var(--neon-cyan); font-weight: 700;">SISTEMA EN RIESGO</span>
+                <h4 id="g3-prompt" style="font-size: 0.98rem; line-height: 1.45; margin-top: 0.35rem; color: #ffffff;">Escenario</h4>
+              </div>
+              <div id="g3-options" style="display: flex; flex-direction: column; gap: 0.55rem; width: 100%; max-width: 520px; margin: 1rem auto 0;"></div>
+              <div id="g3-feedback" style="margin-top: 0.8rem; font-size: 0.84rem; min-height: 1.3rem;"></div>
+            </div>
+
+            <div id="g3-end-screen" style="display: none;">
+              <h3 style="font-size: 1.5rem; color: var(--neon-green); margin-bottom: 0.5rem;">¡Acoplamiento Completado!</h3>
+              <p style="color: var(--text-muted); margin-bottom: 1.3rem;">
+                Aciertos logrados: <strong id="g3-final-score" style="color: #ffffff; font-size: 1.4rem;">0</strong> / 5
+              </p>
+              <button class="btn btn-secondary" onclick="startG3()">Volver a Jugar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. VIDEOS RELACIONADOS 100% EN ESPAÑOL (SOLICITADO EXPLÍCITAMENTE)
+       ========================================================================== -->
+  <section class="section" id="videos-espanol">
+    <div class="container">
+      <div class="unit-tag unit-tag-pink">RECURSOS AUDIOVISUALES EN ESPAÑOL</div>
+      <h2 class="section-title pink">Cátedras y Conferencias en Español</h2>
+      <p class="section-desc">
+        Videos seleccionados en español sobre <strong>Entropía, Neguentropía y Teoría General de Sistemas</strong> de Ludwig von Bertalanffy.
+      </p>
+
+      <div class="videos-grid">
+        <div class="video-card">
+          <div class="video-embed-box">
+            <button type="button" class="video-poster-trigger" onclick="playYouTubeVideo(this, '0FJwFmx65Uw')" aria-label="Reproducir video Entropía y Neguentropía">
+              <img src="https://i.ytimg.com/vi/0FJwFmx65Uw/hqdefault.jpg" alt="Miniatura del video sobre Entropía y Neguentropía" />
+              <span class="video-play-btn" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="video-meta">
+            <span class="video-tag">VIDEO EN ESPAÑOL · TEMA 19</span>
+            <h3 class="video-title">Entropía y Neguentropía en la Teoría de Sistemas</h3>
+            <p class="video-desc">
+              Explicación pedagógica en español de cómo los sistemas abiertos extraen orden del entorno y transfieren 
+              su entropía al exterior para sobrevivir al desgaste natural.
+            </p>
+            <a href="https://youtu.be/0FJwFmx65Uw?si=xTVR-EP-kR7XAMUn" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top: 1rem; padding: 0.45rem 0.9rem; font-size: 0.78rem;">
+              ▶ Abrir directamente en YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-embed-box">
+            <button type="button" class="video-poster-trigger" onclick="playYouTubeVideo(this, 'FApIdf9VwPk')" aria-label="Reproducir segundo video de Teoría General de Sistemas">
+              <img src="https://i.ytimg.com/vi/FApIdf9VwPk/hqdefault.jpg" alt="Miniatura del segundo video sobre Teoría General de Sistemas" />
+              <span class="video-play-btn" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="video-meta">
+            <span class="video-tag">CLASE MAGISTRAL EN ESPAÑOL</span>
+            <h3 class="video-title">Teoría General de Sistemas, Entropía y Neguentropía</h3>
+            <p class="video-desc">
+              Recorrido en español por los orígenes de la TGS: el paso del mecanicismo cartesiano al enfoque holístico, 
+              sistemas abiertos y leyes universales del orden.
+            </p>
+            <a href="https://youtu.be/FApIdf9VwPk?si=zV8pA7OEkIOFHIKf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top: 1rem; padding: 0.45rem 0.9rem; font-size: 0.78rem;">
+              ▶ Abrir directamente en YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. QUIZ EVALUATIVO: TEMA 19
+       ========================================================================== -->
+  <section class="section" id="prueba-comandante">
+    <div class="container" style="max-width: 820px;">
+      <div class="unit-tag unit-tag-cyan">VALIDACIÓN COGNITIVA</div>
+      <h2 class="section-title cyan" style="text-align: center;">🎖️ Prueba Evaluativa: Tema 19</h2>
+      <p class="section-desc" style="text-align: center; margin: 0 auto 2.5rem;">
+        Demuestra tu dominio conceptual sobre la Entropía y Neguentropía para consolidar tu aprendizaje en TGS.
+      </p>
+
+      <div class="glass-card">
+        <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 9999px; margin-bottom: 1.75rem; overflow: hidden;">
+          <div id="quiz-pbar" style="height: 100%; width: 20%; background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));"></div>
+        </div>
+
+        <div id="quiz-screen-q">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <span class="unit-tag unit-tag-pink" id="quiz-counter-tag" style="margin: 0;">PREGUNTA 1 DE 5</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-cyan);">+50 XP POR ACIERTO</span>
+          </div>
+
+          <h3 id="quiz-question-title" style="font-size: 1.05rem; font-weight: 700; margin-bottom: 1.1rem; line-height: 1.4;">
+            Pregunta aquí
+          </h3>
+
+          <div id="quiz-options-box"></div>
+
+          <div id="quiz-expl-box" style="display: none; padding: 1.25rem; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid var(--border-glass); font-size: 0.88rem; margin-top: 1.25rem;">
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; margin-top: 1.5rem;">
+            <button class="btn btn-gradient" id="quiz-next-btn" onclick="nextQuizStep()" style="display: none;">
+              Siguiente Pregunta →
+            </button>
+          </div>
+        </div>
+
+        <div id="quiz-screen-res" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div style="width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, rgba(139, 92, 246, 0.3), rgba(15, 23, 42, 0.9)); border: 3px solid var(--neon-cyan); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);">
+            <span id="quiz-res-score" style="font-size: 2.5rem; font-weight: 800; font-family: var(--font-mono); color: #ffffff;">5/5</span>
+          </div>
+
+          <h3 id="quiz-res-title" style="font-size: 1.7rem; font-weight: 800; margin-bottom: 0.5rem; color: #ffffff;">
+            ¡Maestro Sistémico Neguentrópico!
+          </h3>
+          <p id="quiz-res-desc" style="color: var(--text-muted); max-width: 550px; margin: 0 auto 2rem; font-size: 0.95rem;">
+            Has dominado las leyes de la entropía, la neguentropía y los modelos de sistemas abiertos propuestos por Ludwig von Bertalanffy.
+          </p>
+
+          <button class="btn btn-gradient" onclick="resetQuiz()">Reintentar Prueba</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODAL DE FEEDBACK DE DECISIONES
+       ========================================================================== -->
+  <div class="modal-backdrop" id="decision-modal" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeDecision()">&times;</button>
+      <div id="modal-tag" class="unit-tag unit-tag-cyan" style="margin-bottom: 0.8rem;">RESULTADO</div>
+      <h3 id="modal-head" style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.75rem;">Título</h3>
+      <p id="modal-text" style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+        Cuerpo de explicación.
+      </p>
+      <div id="modal-cite" style="border-left: 3px solid var(--neon-cyan); padding-left: 0.75rem; font-size: 0.82rem; font-style: italic; color: #cbd5e1;">
+        Principio de TGS.
+      </div>
+      <div style="margin-top: 1.5rem; text-align: right;">
+        <button class="btn btn-secondary" onclick="closeDecision()">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       10. SÍNTESIS SISTÉMICA, GLOSARIO Y CERTIFICADO ACADÉMICO OFICIAL
+       ========================================================================== -->
+  <section class="section" id="cierre-sistemico" style="position: relative; overflow: hidden;">
+    <!-- ROBOCITO DECORATIVO AL FONDO -->
+    <div class="robot-bg-decor" style="left: 3%; top: 18%; right: auto;" aria-hidden="true">
+      <div class="floating-robot" style="animation-delay: -2s; font-size: 85px; opacity: 0.12;">🤖</div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="unit-tag unit-tag-cyan" style="border-color: #fbbf24; color: #fbbf24;">SÍNTESIS FINAL & CERTIFICACIÓN · TEMA 19</div>
+      <h2 class="section-title">
+        Consolidación Teórica &<br>
+        <span style="color: var(--neon-cyan);">Acreditación de Competencias en TGS</span>
+      </h2>
+      <p class="section-desc">
+        Has completado el recorrido por la termodinámica de sistemas abiertos, las leyes cibernéticas y el principio neguentrópico. 
+        Revisa los 4 postulados universales, consulta el glosario clave y obtén tu certificado académico oficial de la Universidad Simón Bolívar.
+      </p>
+
+      <!-- 4 LEYES SISTÉMICAS FUNDAMENTALES (CARDS LLAMATIVAS) -->
+      <div class="summary-laws-grid">
+        <div class="summary-law-card">
+          <div class="summary-law-icon">⏳</div>
+          <div class="summary-law-title">2ª Ley de la Termodinámica</div>
+          <div class="summary-law-formula">ΔS_aislado ≥ 0 (Entropía Máxima)</div>
+          <p class="summary-law-desc">
+            En un sistema aislado sin intercambio energético ni informativo con el exterior, los gradientes se disipan 
+            inevitablemente hacia el equilibrio térmico estático, el desorden total y la muerte del sistema.
+          </p>
+        </div>
+
+        <div class="summary-law-card">
+          <div class="summary-law-icon">🌱</div>
+          <div class="summary-law-title">Neguentropía de Schrödinger</div>
+          <div class="summary-law-formula">dS = d_e S + d_i S &nbsp;|&nbsp; d_e S &lt; 0</div>
+          <p class="summary-law-desc">
+            "La vida se alimenta de entropía negativa". Los sistemas biológicos y organizacionales extraen orden del 
+            entorno para contrarrestar la producción interna de degradación entrópica y preservar su estructura.
+          </p>
+        </div>
+
+        <div class="summary-law-card">
+          <div class="summary-law-icon">🛡️</div>
+          <div class="summary-law-title">Ley de Variedad Requerida (Ashby)</div>
+          <div class="summary-law-formula">V_control ≥ V_perturbación</div>
+          <p class="summary-law-desc">
+            "Solo la variedad puede absorber a la variedad". Para que un sistema sobreviva a las amenazas del entorno, 
+            su subsistema de control debe poseer al menos tantas respuestas como estados posibles tenga la perturbación.
+          </p>
+        </div>
+
+        <div class="summary-law-card">
+          <div class="summary-law-icon">📡</div>
+          <div class="summary-law-title">Teoría de la Información (Brillouin)</div>
+          <div class="summary-law-formula">I = -S (Información = Neguentropía)</div>
+          <p class="summary-law-desc">
+            Cada bit de información incorporado al sistema disminuye la incertidumbre y el desorden estructural, 
+            constituyendo el catalizador primordial de la autoorganización y la evolución adaptativa.
+          </p>
+        </div>
+      </div>
+
+      <!-- GLOSARIO SISTÉMICO INTERACTIVO -->
+      <div style="margin-top: 3.5rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: #ffffff;">
+            📚 Glosario Esencial de Teoría General de Sistemas
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--neon-cyan); font-family: var(--font-mono);">
+            TEMA 19 // VOCABULARIO_TÉCNICO
+          </span>
+        </div>
+
+        <div class="terms-cloud-grid">
+          <div class="term-pill-card">
+            <span class="term-pill-badge" style="background: rgba(244, 63, 94, 0.15); color: #fda4af;">Degradación</span>
+            <div class="term-pill-title">Entropía (S)</div>
+            <p class="term-pill-desc">Tendencia natural al desorden, pérdida de energía útil e irreversibilidad térmica.</p>
+          </div>
+          <div class="term-pill-card">
+            <span class="term-pill-badge" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">Regeneración</span>
+            <div class="term-pill-title">Neguentropía (-S)</div>
+            <p class="term-pill-desc">Importación activa de energía, materia e información que instaura y preserva el orden.</p>
+          </div>
+          <div class="term-pill-card">
+            <span class="term-pill-badge" style="background: rgba(6, 182, 212, 0.15); color: #67e8f9;">Regulación</span>
+            <div class="term-pill-title">Homeostasis</div>
+            <p class="term-pill-desc">Capacidad cibernética de autorregulación para preservar el equilibrio dinámico interno.</p>
+          </div>
+          <div class="term-pill-card">
+            <span class="term-pill-badge" style="background: rgba(139, 92, 246, 0.15); color: #c4b5fd;">Convergencia</span>
+            <div class="term-pill-title">Equifinalidad</div>
+            <p class="term-pill-desc">Llegar al mismo estado meta a través de diversos caminos y partiendo de condiciones distintas.</p>
+          </div>
+          <div class="term-pill-card">
+            <span class="term-pill-badge" style="background: rgba(245, 158, 11, 0.15); color: #fde68a;">Cibernética</span>
+            <div class="term-pill-title">Feedback Negativo</div>
+            <p class="term-pill-desc">Bucle de retroalimentación que atenúa o neutraliza las desviaciones del objetivo deseado.</p>
+          </div>
+          <div class="term-pill-card">
+            <span class="term-pill-badge" style="background: rgba(217, 70, 239, 0.15); color: #f5d0fe;">Adaptación</span>
+            <div class="term-pill-title">Morfogénesis</div>
+            <p class="term-pill-desc">Habilidad de un sistema para transformar y evolucionar su estructura y crecer ante cambios.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN DESTACADA: ROBOT CIBERNÉTICO Y MODELO DE TEORÍA DE SISTEMAS -->
+      <div class="systems-robot-showcase glass-card" style="margin-top: 3.5rem; position: relative; overflow: hidden; border: 1.5px solid rgba(6, 182, 212, 0.4); padding: 2.5rem; border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(10, 15, 29, 0.98));">
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.8rem;">
+          <div style="display: flex; align-items: center; gap: 1.2rem;">
+            <div class="robot-avatar-box">
+              <span class="robot-avatar-icon">🤖</span>
+              <span class="robot-status-dot"></span>
+            </div>
+            <div>
+              <div class="unit-tag unit-tag-cyan" style="margin: 0; font-size: 0.72rem;">AUTÓMATA CIBERNÉTICO DE WIENER & BERTALANFFY</div>
+              <h3 style="font-size: 1.45rem; font-weight: 800; color: #ffffff; margin-top: 0.35rem;">
+                RoboTGS: Agente Neguentrópico en Teoría de Sistemas
+              </h3>
+            </div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--neon-cyan); background: rgba(6, 182, 212, 0.1); padding: 0.45rem 0.9rem; border-radius: var(--radius-sm); border: 1px solid rgba(6, 182, 212, 0.25);">
+            BUCLE_CIBERNÉTICO: ACTIVO // HOMEOSTASIS = 100%
+          </div>
+        </div>
+
+        <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem;">
+          En la <strong>Teoría General de Sistemas</strong> y la <strong>Cibernética de Norbert Wiener</strong>, un robot o agente autorregulado representa el arquetipo de un 
+          <strong>sistema abierto neguentrópico</strong>: capta perturbaciones mediante sensores (Entradas), procesa la información para reducir la incertidumbre (Proceso), 
+          ejecuta contramedidas mediante actuadores (Salidas) y compara constantemente el resultado con su meta mediante <strong>Retroalimentación Negativa (Feedback)</strong>.
+        </p>
+
+        <!-- DIAGRAMA INTERACTIVO DEL BUCLE CIBERNÉTICO DEL ROBOT -->
+        <div class="robot-feedback-flow">
+          <div class="rf-step">
+            <div class="rf-icon">📡</div>
+            <div class="rf-title">1. Entrada (Input)</div>
+            <div class="rf-desc">Sensores captan energía, datos y perturbaciones del entorno exterior.</div>
+          </div>
+          <div class="rf-step rf-highlight">
+            <div class="rf-icon">🤖🧠</div>
+            <div class="rf-title">2. Proceso / Control</div>
+            <div class="rf-desc">Inyección de neguentropía: algoritmos que generan orden y disipan el caos térmico.</div>
+          </div>
+          <div class="rf-step">
+            <div class="rf-icon">⚙️</div>
+            <div class="rf-title">3. Salida (Output)</div>
+            <div class="rf-desc">Acciones homeostáticas que equilibran el sistema y expulsan entropía residual.</div>
+          </div>
+          <div class="rf-step rf-feedback">
+            <div class="rf-icon">🔄</div>
+            <div class="rf-title">4. Feedback (−)</div>
+            <div class="rf-desc">Bucle cibernético que anula la desviación: e(t) = y_deseado − y_medido.</div>
+          </div>
+        </div>
+
+        <!-- SIMULACIÓN EN VIVO DEL ROBOT SISTÉMICO -->
+        <div class="robot-live-control" style="margin-top: 2rem; background: rgba(0, 0, 0, 0.35); padding: 1.25rem 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <span style="font-size: 2.2rem;" id="robot-mood-icon">🤖</span>
+            <div>
+              <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff;" id="robot-status-title">RoboTGS: Operando en Homeostasis Neguentrópica Óptima</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);" id="robot-status-sub">Nivel de Entropía Interna: 15% · Neguentropía Activa: 85%</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button class="btn btn-rose" style="padding: 0.5rem 1rem; font-size: 0.82rem;" onclick="triggerRobotPerturbation()">
+              ⚡ Inyectar Perturbación (+Entropía)
+            </button>
+            <button class="btn btn-gradient" style="padding: 0.5rem 1rem; font-size: 0.82rem;" onclick="triggerRobotHomeostasis()">
+              🤖 Aplicar Corrección Neguentrópica
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ROBOT ACOMPAÑANTE EN EL FONDO DE LA INFORMACIÓN -->
+      <div class="cert-robot-companion-banner" style="margin-top: 2.5rem; background: rgba(6, 182, 212, 0.08); border: 1.5px solid rgba(6, 182, 212, 0.35); border-radius: var(--radius-md); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; box-shadow: 0 0 25px rgba(6, 182, 212, 0.15);">
+        <div style="font-size: 3.5rem; animation: floatRobot 4s ease-in-out infinite;">🤖</div>
+        <div style="text-align: left; max-width: 650px;">
+          <div style="font-size: 0.75rem; font-weight: 800; color: var(--neon-cyan); letter-spacing: 0.06em; text-transform: uppercase;">
+            ASISTENTE CIBERNÉTICO · UNIVERSIDAD SIMÓN BOLÍVAR · CAMPUS CÚCUTA
+          </div>
+          <div style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0.3rem 0;">
+            «Teoría General de Sistemas: El orden neguentrópico vence a la entropía térmica.»
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+            Modelo sistémico cibernético autorregulado de Ludwig von Bertalanffy y Norbert Wiener. 
+            Cátedra de Teoría de Sistemas · Facultad de Ingenierías · Docente: Eddy Ramírez.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER Y CRÉDITOS ACADÉMICOS
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.25rem; flex-wrap: wrap;">
+            <div class="usb-student-badge" style="padding: 4px 10px;">
+              <img class="usb-logo-target" src="logo.png" alt="Logo Universidad Simón Bolívar" style="height: 36px; width: auto; object-fit: contain; display: block;" />
+            </div>
+            <div class="brand-logo-badge">ΔS</div>
+            <strong style="font-size: 1.15rem; color: #ffffff;">OVA: Entropía y Neguentropía</strong>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+            Objeto Virtual de Aprendizaje (OVA) interactivo desarrollado para la cátedra de 
+            <em>Teoría General de Sistemas</em> de la <strong>Universidad Simón Bolívar — Campus Cúcuta</strong>.
+          </p>
+          <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.7;">
+            👨‍🎓 <strong>Estudiante Autor:</strong> Juan Camilo Ramírez Cáceres<br>
+            👨‍🏫 <strong>Docente:</strong> Eddy Ramírez<br>
+            📚 <strong>Asignatura:</strong> Curso de Teoría de Sistemas // Tema 19<br>
+            🏛️ <strong>Institución:</strong> Universidad Simón Bolívar Campus Cúcuta<br>
+            💻 <strong>Programa:</strong> Ingeniería de Sistemas
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 1rem; border-bottom: 2px solid var(--neon-cyan); display: inline-block; padding-bottom: 0.3rem;">
+            Referencias Bibliográficas (APA)
+          </h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.8rem; color: var(--text-muted);">
+            <li>Bertalanffy, L. von. (1968). <em>General System Theory: Foundations, Development, Applications</em>. George Braziller.</li>
+            <li>Schrödinger, E. (1944). <em>What is Life? The Physical Aspect of the Living Cell</em>. Cambridge University Press.</li>
+            <li>Brillouin, L. (1956). <em>Science and Information Theory</em>. Academic Press.</li>
+            <li>Wiener, N. (1948). <em>Cybernetics: Or Control and Communication in the Animal and the Machine</em>. MIT Press.</li>
+            <li>Johansen Bertoglio, O. (2004). <em>Introducción a la Teoría General de Sistemas</em>. Limusa.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 1rem; border-bottom: 2px solid var(--neon-pink); display: inline-block; padding-bottom: 0.3rem;">
+            Nota Ética y Tecnológica
+          </h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+            Desarrollado en un solo bloque autocontenido (HTML5, CSS3 Glassmorphism y JS Vanilla) con Web Audio API sintetizado y gamificación interactiva.
+          </p>
+          <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.25); border-radius: var(--radius-sm); padding: 0.75rem; font-size: 0.76rem; color: #e2e8f0;">
+            🤖 <strong>Uso de Inteligencia Artificial:</strong> Se emplearon modelos de IA generativa como herramienta de co-diseño, 
+            programación asistida y refinamiento pedagógico del contenido.
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-subtle); flex-wrap: wrap; gap: 0.5rem;">
+        <div>© Universidad Simón Bolívar — Cúcuta / Barranquilla, Colombia.</div>
+        <div style="font-family: var(--font-mono); color: var(--neon-cyan);">TEMA 19: ENTROPÍA_Y_NEGUENTROPÍA // ESTADO_ESTABLE</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT VANILLA AUTOCONTENIDO (LÓGICA COMPLETA)
+       ========================================================================== -->
+  <!-- Código JavaScript del proyecto (Lógica, Simuladores y Juegos) -->
+  <script src="script.js"></script>
+
+  <!-- Botón flotante para volver al principio -->
+  <button class="back-to-top-btn" id="back-to-top" onclick="scrollToTop()" title="Volver al principio de la página">
+    <span>⬆</span>
+    <span>Volver al Principio</span>
+  </button>
+
+  <!-- MODAL DE FICHA TÉCNICA DEL OVA -->
+  <div class="ficha-modal-backdrop" id="ficha-tecnica-modal" onclick="if(event.target===this) closeFichaTecnica()">
+    <div class="ficha-modal-card" role="dialog" aria-modal="true" aria-labelledby="ficha-modal-title">
+      <div class="ficha-modal-header">
+        <div>
+          <span class="unit-tag unit-tag-cyan" style="margin-bottom: 0.35rem;">DOCUMENTO METADATOS · TGS</span>
+          <h3 id="ficha-modal-title">📄 Ficha Técnica del OVA</h3>
+        </div>
+        <button type="button" class="ficha-close-btn" onclick="closeFichaTecnica()" aria-label="Cerrar Ficha Técnica">✕</button>
+      </div>
+
+      <div class="ficha-grid">
+        <div class="ficha-item">
+          <small>Título del Objeto Virtual</small>
+          <strong>Entropía y Neguentropía: El Pulso Vital del Orden Sistémico</strong>
+        </div>
+        <div class="ficha-item">
+          <small>Unidad / Tema</small>
+          <strong>Tema 19 · Teoría General de Sistemas</strong>
+        </div>
+        <div class="ficha-item">
+          <small>Institución Educativa</small>
+          <strong>Universidad Simón Bolívar · Campus Cúcuta</strong>
+        </div>
+        <div class="ficha-item">
+          <small>Programa / Facultad</small>
+          <strong>Facultad de Ingenierías · Ingeniería de Sistemas</strong>
+        </div>
+        <div class="ficha-item">
+          <small>Docente Titular</small>
+          <strong>Eddy Ramírez</strong>
+        </div>
+        <div class="ficha-item">
+          <small>Estudiante Autor</small>
+          <strong>Juan Camilo Ramírez Cáceres</strong>
+        </div>
+        <div class="ficha-item ficha-item-wide">
+          <small>Objetivo de Aprendizaje</small>
+          <strong>Analizar la Segunda Ley de la Termodinámica aplicada a los sistemas abiertos, comprendiendo el modelo E-P-S-R, la información como neguentropía (Shannon, Wiener y Schrödinger) y las estrategias de homeostasis y toma de decisiones para contrarrestar el desgaste sistémico.</strong>
+        </div>
+        <div class="ficha-item ficha-item-wide">
+          <small>Estructura Didáctica y Recursos</small>
+          <strong>9 módulos interactivos independientes: Flujo E-P-S-R, Taller de Clasificación, Leyes Fundamentales, Casos Reales, Toma de Decisiones, Laboratorio Gamificado (Clasificador 30s + Simulador de Neguentropía), Videos en Español, Prueba Evaluativa y Síntesis con RoboTGS.</strong>
+        </div>
+        <div class="ficha-item">
+          <small>Accesibilidad Integrada</small>
+          <strong>Modo Claro/Oscuro, Zoom Tipográfico (A-/A+) y Narrador de Voz (Web Speech API)</strong>
+        </div>
+        <div class="ficha-item">
+          <small>Tecnología & Compatibilidad</small>
+          <strong>HTML5, CSS3, JavaScript Vanilla · Ejecución local sin servidor (offline)</strong>
+        </div>
+      </div>
+
+      <div class="ficha-modal-footer">
+        <button type="button" class="btn btn-gradient" onclick="closeFichaTecnica()">Cerrar Ficha Técnica</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
