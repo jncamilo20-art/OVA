@@ -1905,10 +1905,9 @@
       padding: 3.2rem 2.2rem;
       border-radius: var(--radius-lg) var(--radius-lg) 0 0;
       background-color: #044332;
-      background-image: 
+      background-image:
         linear-gradient(180deg, rgba(4, 67, 50, 0.62) 0%, rgba(10, 25, 47, 0.88) 100%),
-        url('FONDO.png'),
-        url('../FONDO.png');
+        url('../assets/FONDO.png');
       background-size: cover;
       background-position: center 35%;
       background-repeat: no-repeat;
