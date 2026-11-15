@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#888">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+pdfjsLib.getDocument('ref.pdf').promise.then(async d=>{window.nPages=d.numPages;let txt=[];
+for(let i=1;i<=d.numPages;i++){const p=await d.getPage(i);const v=p.getViewport({scale:1});const s=(innerWidth-10)/v.width;const vp=p.getViewport({scale:s});
+const c=document.createElement('canvas');c.width=vp.width;c.height=vp.height;c.style.display='block';c.style.margin='0 auto 8px';document.body.appendChild(c);
+await p.render({canvasContext:c.getContext('2d'),viewport:vp}).promise;const t=await p.getTextContent();txt.push('--- p'+i+'\n'+t.items.map(x=>x.str).join(' '));}
+window.pdfText=txt.join('\n');window.done=true;});
+</script>

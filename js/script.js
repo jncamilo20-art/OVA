@@ -1155,6 +1155,13 @@
       if (modal) modal.classList.remove('open');
     }
 
+    function printFichaTecnica() {
+      playTone('click');
+      document.body.classList.add('printing-ficha');
+      window.print();
+      document.body.classList.remove('printing-ficha');
+    }
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeFichaTecnica();
     });

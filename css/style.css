@@ -1133,8 +1133,60 @@
        ========================================================================== */
     .videos-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .video-observation-box {
+      margin-top: 1rem;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      background: rgba(139, 92, 246, 0.09);
+      border: 1px solid rgba(139, 92, 246, 0.22);
+    }
+
+    .video-observation-title {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--neon-cyan);
+      margin-bottom: 0.55rem;
+    }
+
+    .video-observation-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .video-observation-list li {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .video-observation-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.45rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--neon-green);
+    }
+
+    body.light-theme .video-observation-box {
+      background: rgba(99, 102, 241, 0.08);
+      border-color: rgba(99, 102, 241, 0.22);
+    }
+
+    body.light-theme .video-observation-list {
+      color: #1e293b;
     }
 
     .video-card {
@@ -2495,7 +2547,7 @@
       }
     }
 
-    /* Modal Ficha Técnica */
+    /* Modal Ficha Técnica (formato documento institucional) */
     .ficha-modal-backdrop {
       position: fixed;
       inset: 0;
@@ -2513,42 +2565,65 @@
       animation: moduleFadeIn 0.25s ease;
     }
 
-    .ficha-modal-card {
+    .ficha-doc {
+      --ficha-ink: #0f172a;
+      --ficha-muted: #475569;
+      --ficha-line: #e2e8f0;
+      --ficha-accent: #0e7490;
+      --ficha-soft: #f1f5f9;
       width: 100%;
-      max-width: 760px;
+      max-width: 820px;
       max-height: 90vh;
       overflow-y: auto;
-      background: #0d1528;
-      border: 1px solid rgba(6, 182, 212, 0.4);
-      border-radius: 20px;
-      padding: 1.75rem;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
-      color: var(--text-main);
+      background: #ffffff;
+      border-radius: 14px;
+      border-top: 6px solid var(--ficha-accent);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      color: var(--ficha-ink);
+      font-family: var(--font-sans);
     }
 
-    .ficha-modal-header {
+    .ficha-doc-header {
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
+      align-items: center;
       gap: 1rem;
-      margin-bottom: 1.25rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid var(--ficha-line);
     }
 
-    .ficha-modal-header h3 {
-      font-size: 1.45rem;
+    .ficha-doc-logo {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .ficha-doc-institution {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ficha-doc-institution strong {
+      font-size: 1rem;
       font-weight: 800;
-      color: #ffffff;
+      color: var(--ficha-ink);
+    }
+
+    .ficha-doc-institution span {
+      font-size: 0.8rem;
+      color: var(--ficha-muted);
     }
 
     .ficha-close-btn {
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(255, 255, 255, 0.06);
-      color: #ffffff;
+      border: 1px solid var(--ficha-line);
+      background: var(--ficha-soft);
+      color: var(--ficha-ink);
       font-size: 1rem;
       cursor: pointer;
       flex-shrink: 0;
@@ -2556,57 +2631,302 @@
     }
 
     .ficha-close-btn:hover {
-      background: rgba(244, 63, 94, 0.25);
+      background: #fee2e2;
       border-color: var(--neon-rose);
+      color: #be123c;
     }
 
-    .ficha-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.9rem;
+    .ficha-doc-titlebar {
+      padding: 1.5rem 1.75rem 1.25rem;
+      background: var(--ficha-soft);
+      border-bottom: 1px solid var(--ficha-line);
     }
 
-    .ficha-item {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 0.85rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .ficha-item-wide {
-      grid-column: span 2;
-    }
-
-    .ficha-item small {
+    .ficha-doc-kicker {
+      display: block;
       font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--neon-cyan);
       font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ficha-accent);
+      margin-bottom: 0.4rem;
     }
 
-    .ficha-item strong {
+    .ficha-doc .ficha-doc-titlebar h3 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--ficha-ink) !important;
+      margin: 0 0 1rem;
+    }
+
+    .ficha-doc-meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 0;
+    }
+
+    .ficha-doc-meta div {
+      border-left: 3px solid var(--ficha-accent);
+      padding-left: 0.65rem;
+    }
+
+    .ficha-doc-meta dt {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ficha-muted);
+    }
+
+    .ficha-doc-meta dd {
+      margin: 0.1rem 0 0;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ficha-ink);
+    }
+
+    .ficha-doc-section {
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid var(--ficha-line);
+    }
+
+    .ficha-doc .ficha-doc-section h4 {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ficha-ink) !important;
+      margin: 0 0 0.85rem;
+    }
+
+    .ficha-doc-section h4 span {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #ffffff;
+      background: var(--ficha-accent);
+      border-radius: 6px;
+      padding: 0.15rem 0.45rem;
+    }
+
+    .ficha-doc-section p {
       font-size: 0.9rem;
-      font-weight: 600;
-      color: #f8fafc;
+      line-height: 1.6;
+      color: var(--ficha-ink);
+      margin: 0 0 0.75rem;
+    }
+
+    .ficha-doc-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .ficha-doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    .ficha-doc-table th,
+    .ficha-doc-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--ficha-line);
       line-height: 1.45;
     }
 
-    .ficha-modal-footer {
-      margin-top: 1.35rem;
+    .ficha-doc-table tr:last-child th,
+    .ficha-doc-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .ficha-doc-table th {
+      width: 34%;
+      font-weight: 700;
+      color: var(--ficha-muted);
+      background: var(--ficha-soft);
+    }
+
+    .ficha-doc-table td {
+      color: var(--ficha-ink);
+    }
+
+    .ficha-doc-table a {
+      color: var(--ficha-accent);
+      font-weight: 600;
+    }
+
+    .ficha-doc-list {
+      margin: 0;
+      padding-left: 1.2rem;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--ficha-ink);
+    }
+
+    .ficha-doc-modules {
+      list-style: none;
+      counter-reset: ficha-mod;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.6rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ficha-doc-modules li {
+      counter-increment: ficha-mod;
+      border: 1px solid var(--ficha-line);
+      border-radius: 10px;
+      padding: 0.65rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .ficha-doc-modules li::before {
+      content: counter(ficha-mod, decimal-leading-zero);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--ficha-accent);
+    }
+
+    .ficha-doc-modules strong {
+      font-size: 0.86rem;
+      color: var(--ficha-ink);
+    }
+
+    .ficha-doc-modules span {
+      font-size: 0.78rem;
+      color: var(--ficha-muted);
+      line-height: 1.4;
+    }
+
+    .ficha-doc-tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ficha-doc-tags li {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ficha-accent);
+      background: #ecfeff;
+      border: 1px solid #a5f3fc;
+      border-radius: 999px;
+      padding: 0.3rem 0.8rem;
+    }
+
+    .ficha-doc-footer {
       display: flex;
       justify-content: flex-end;
+      gap: 0.75rem;
+      padding: 1.1rem 1.75rem;
+      background: var(--ficha-soft);
+    }
+
+    .ficha-btn-secondary {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ficha-ink);
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 0.6rem 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .ficha-btn-secondary:hover {
+      border-color: var(--ficha-accent);
+      color: var(--ficha-accent);
     }
 
     @media (max-width: 640px) {
-      .ficha-grid {
+      .ficha-modal-backdrop {
+        padding: 0.75rem;
+      }
+      .ficha-doc {
+        max-height: 92vh;
+      }
+      .ficha-doc-header,
+      .ficha-doc-titlebar,
+      .ficha-doc-section,
+      .ficha-doc-footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .ficha-doc-header {
+        flex-wrap: wrap;
+        row-gap: 0.75rem;
+      }
+      .ficha-doc-logo {
+        height: 40px;
+        max-width: calc(100% - 52px);
+      }
+      .ficha-close-btn {
+        margin-left: auto;
+      }
+      .ficha-doc-institution {
+        flex-basis: 100%;
+        order: 3;
+      }
+      .ficha-doc .ficha-doc-titlebar h3 {
+        font-size: 1.2rem;
+      }
+      .ficha-doc-meta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .ficha-doc-modules {
         grid-template-columns: 1fr;
       }
-      .ficha-item-wide {
-        grid-column: span 1;
+      .ficha-doc-table th {
+        width: 40%;
+      }
+      .ficha-doc-footer {
+        flex-direction: column-reverse;
+      }
+    }
+
+    /* Impresión de la Ficha Técnica */
+    @media print {
+      body.printing-ficha .ficha-modal-backdrop,
+      body.printing-ficha .ficha-modal-backdrop * {
+        visibility: visible !important;
+      }
+      body.printing-ficha .ficha-modal-backdrop {
+        position: absolute !important;
+        inset: 0 auto auto 0 !important;
+        width: 100% !important;
+        display: block !important;
+        background: #ffffff !important;
+        backdrop-filter: none !important;
+        padding: 0 !important;
+      }
+      body.printing-ficha .ficha-doc {
+        max-width: none !important;
+        max-height: none !important;
+        overflow: visible !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+      body.printing-ficha .ficha-doc-section {
+        break-inside: avoid;
+      }
+      body.printing-ficha .ficha-doc,
+      body.printing-ficha .ficha-doc * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
     }
 
@@ -2638,8 +2958,6 @@
     body.light-theme .inicio-temas-title,
     body.light-theme .tema-name,
     body.light-theme .module-return-info strong,
-    body.light-theme .ficha-modal-header h3,
-    body.light-theme .ficha-item strong,
     body.light-theme h1,
     body.light-theme h2,
     body.light-theme h3,
@@ -2666,7 +2984,6 @@
     body.light-theme .glass-card,
     body.light-theme .tema-index-card,
     body.light-theme .module-return-bar,
-    body.light-theme .ficha-modal-card,
     body.light-theme .student-badge-card,
     body.light-theme .tip-box,
     body.light-theme .approach-card,
@@ -2681,8 +2998,7 @@
     body.light-theme .modal-card,
     body.light-theme .summary-law-card,
     body.light-theme .term-pill-card,
-    body.light-theme .video-card,
-    body.light-theme .ficha-item {
+    body.light-theme .video-card {
       background: rgba(205, 215, 229, 0.94);
       border-color: rgba(15, 23, 42, 0.16);
       color: #0f172a;
@@ -2912,10 +3228,6 @@
         font-size: 0.84rem;
       }
 
-      .ficha-modal-card {
-        padding: 1.15rem;
-        max-height: 88vh;
-      }
 
       .back-to-top-btn {
         bottom: 1rem;
