@@ -250,7 +250,7 @@
     .usb-student-logo {
       height: 32px;
       width: auto;
-      max-width: 100px;
+      max-width: 150px;
       object-fit: contain;
       display: block;
     }
@@ -1469,12 +1469,22 @@
       height: 100%;
     }
     .usb-badge-crest .usb-brand-logo {
-      height: 38px;
+      height: 36px;
       width: auto;
-      max-width: 105px;
+      max-width: 155px;
       object-fit: contain;
       display: block;
       filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
+    }
+    .ing-sistemas-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid #10b981;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.35);
+      flex-shrink: 0;
+      display: block;
     }
     .usb-badge-text {
       display: flex;
