@@ -248,9 +248,9 @@
       box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
     }
     .usb-student-logo {
-      height: 32px;
+      height: 28px;
       width: auto;
-      max-width: 150px;
+      max-width: 190px;
       object-fit: contain;
       display: block;
     }
@@ -1469,12 +1469,30 @@
       height: 100%;
     }
     .usb-badge-crest .usb-brand-logo {
-      height: 36px;
+      height: 28px;
       width: auto;
-      max-width: 155px;
+      max-width: 195px;
       object-fit: contain;
       display: block;
       filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
+    }
+    .ing-bg-watermark {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image: url('../assets/ing-sistemas.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: min(520px, 78vw);
+      opacity: 0.11;
+      mix-blend-mode: screen;
+      -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0) 74%);
+      mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0) 74%);
+    }
+    body.light-theme .ing-bg-watermark {
+      opacity: 0.08;
+      mix-blend-mode: multiply;
     }
     .ing-sistemas-badge {
       width: 34px;
