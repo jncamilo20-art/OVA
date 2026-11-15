@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ficha Técnica · OVA Tema 19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0; }
+
+  :root {
+    --navy: #0a0f2e;
+    --navy-2: #121a45;
+    --cyan: #06b6d4;
+    --cyan-soft: #5eead4;
+    --violet: #8b5cf6;
+    --pink: #ec4899;
+    --ink: #0f172a;
+    --muted: #475569;
+    --line: #e2e8f0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--ink);
+    background: #555;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    position: relative;
+    width: 8.5in;
+    height: 11in;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 85% 8%, rgba(139, 92, 246, 0.28), transparent 40%),
+      radial-gradient(circle at 10% 95%, rgba(6, 182, 212, 0.18), transparent 45%),
+      var(--navy);
+    padding: 0.55in 0.6in 0.6in;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  @media screen {
+    .page { margin: 0 auto 16px; }
+  }
+
+  /* Ondas decorativas */
+  .waves { position: absolute; pointer-events: none; z-index: 0; }
+  .waves-left { left: -40px; top: 0; height: 100%; width: 260px; }
+  .waves-corner { right: 0; bottom: 0; width: 330px; height: 200px; }
+  .waves-top { right: 0; top: 0; width: 300px; height: 150px; }
+
+  .content { position: relative; z-index: 1; }
+
+  /* Encabezado de páginas internas */
+  .running {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 0.3in;
+  }
+  .running b { color: var(--cyan-soft); }
+
+  .page-num {
+    position: absolute;
+    right: 0.6in;
+    bottom: 0.38in;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0 0 12px;
+  }
+  h2.center { text-align: center; font-size: 42px; margin-bottom: 22px; }
+  h2 + .card, h2 + .grid-2 { margin-top: 0; }
+  .section { margin-bottom: 22px; }
+
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    font-size: 11.5px;
+    line-height: 1.55;
+  }
+
+  .lead { color: rgba(255, 255, 255, 0.85); font-size: 11.5px; margin: -4px 0 12px; }
+
+  /* Listas con viñeta de color */
+  .bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .bullets li { position: relative; padding-left: 20px; }
+  .bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.18);
+  }
+  .bullets li strong { display: block; color: var(--ink); font-weight: 800; }
+  .bullets.inline li strong { display: inline; }
+  .bullets li span { color: var(--muted); }
+
+  /* Portada */
+  .cover { padding-left: 1.55in; }
+  .kicker {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--cyan-soft);
+    margin: 0.15in 0 14px;
+  }
+  .cover-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 74px;
+    line-height: 0.92;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .cover-theme {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  .cover-theme em { font-style: normal; color: var(--cyan-soft); }
+  .cover-sub { font-size: 10.5px; color: rgba(255, 255, 255, 0.78); margin-bottom: 20px; }
+
+  .logo-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 6px 12px;
+  }
+  .logo-pill img { height: 34px; width: auto; display: block; }
+  .logo-pill img.round { height: 34px; border-radius: 50%; }
+
+  .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; margin-bottom: 12px; }
+  .meta-grid small, .stat small {
+    display: block;
+    font-size: 7.5px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+  }
+  .meta-grid div { font-weight: 700; font-size: 11.5px; }
+  .links { border-top: 1px solid var(--line); padding-top: 8px; }
+  .links div { display: grid; grid-template-columns: 105px 1fr; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 10.5px; }
+  .links div:last-child { border-bottom: none; }
+  .links b { font-weight: 800; }
+  .links span { color: var(--muted); }
+
+  .stats {
+    position: absolute;
+    left: 1.55in;
+    right: 0.6in;
+    bottom: 0.65in;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .stat {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+  .stat b {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+  }
+  .stat small { color: var(--cyan-soft); margin-bottom: 2px; }
+  .stat span { font-size: 9px; color: rgba(255, 255, 255, 0.8); }
+
+  /* Contenido del OVA */
+  .elements { display: flex; flex-direction: column; gap: 8px; }
+  .element {
+    display: grid;
+    grid-template-columns: 34px 150px 1fr;
+    align-items: start;
+    gap: 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 9px 14px;
+    font-size: 10.5px;
+    line-height: 1.5;
+  }
+  .element .n {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--cyan);
+  }
+  .element b { font-weight: 800; font-size: 11.5px; }
+  .element span { color: var(--muted); }
+
+  /* Herramientas */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .tool h3 {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    border-bottom: 2px solid var(--cyan);
+    padding-bottom: 6px;
+    margin-bottom: 9px;
+  }
+  .tool .bullets { gap: 6px; font-size: 10.5px; }
+  .tool .bullets li::before { width: 8px; height: 8px; top: 4px; box-shadow: none; }
+  .tool .bullets li { padding-left: 15px; }
+
+  /* Criterios */
+  table { width: 100%; border-collapse: collapse; font-size: 10.5px; }
+  th {
+    text-align: left;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    padding: 4px 8px 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { font-weight: 800; width: 30%; }
+  td:last-child, th:last-child { text-align: right; width: 54px; font-weight: 800; }
+  td:nth-child(2) { color: var(--muted); }
+
+  .note {
+    margin-top: 12px;
+    background: #ecfeff;
+    border-left: 4px solid var(--cyan);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: var(--muted);
+  }
+
+  .refs p {
+    padding-left: 26px;
+    text-indent: -26px;
+    margin-bottom: 9px;
+    font-size: 10.5px;
+  }
+  .refs p:last-child { margin-bottom: 0; }
+  .refs a, .links a { color: #0e7490; text-decoration: none; }
+
+  p + p { margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<!-- Textura y ondas reutilizables -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gCyan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="gViolet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="gPink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ============================ PÁGINA 1 · PORTADA ============================ -->
+<section class="page">
+  <svg class="waves waves-left" viewBox="0 0 260 1056" preserveAspectRatio="none">
+    <path d="M0 0 H150 C210 120 60 220 120 360 C180 500 40 600 110 760 C170 900 70 980 130 1056 H0 Z" fill="url(#gViolet)" opacity="0.9"/>
+    <path d="M0 0 H95 C150 130 10 240 70 380 C130 520 -5 620 60 780 C110 910 20 990 80 1056 H0 Z" fill="url(#gCyan)"/>
+    <path d="M0 0 H45 C90 140 -20 250 25 400 C70 540 -30 640 20 800 C60 920 -10 1000 30 1056 H0 Z" fill="#0a0f2e" opacity="0.85"/>
+  </svg>
+
+  <div class="content cover">
+    <div class="logo-pill">
+      <img src="../assets/logo.png" alt="Universidad Simón Bolívar">
+      <img class="round" src="../assets/ing-sistemas.jpg" alt="Ingeniería de Sistemas">
+    </div>
+    <div class="kicker">Proyecto final · Objeto Virtual de Aprendizaje (OVA)</div>
+    <div class="cover-title">Ficha<br>Técnica</div>
+    <div class="cover-theme">Tema N° 19 · <em>Entropía y neguentropía en los sistemas</em></div>
+    <div class="cover-sub">Teoría General de Sistemas (TGS) · Ingeniería de Sistemas · Universidad Simón Bolívar, Campus Cúcuta</div>
+
+    <div class="card">
+      <div class="meta-grid">
+        <div><small>Autor</small>Juan Camilo Ramírez Cáceres</div>
+        <div><small>Modalidad</small>Individual</div>
+        <div><small>Asignatura</small>Teoría General de Sistemas (TGS)</div>
+        <div><small>Programa</small>Ingeniería de Sistemas</div>
+        <div><small>Docente</small>Eddy Ramírez</div>
+        <div><small>Entregable</small>OVA web publicada + sustentación</div>
+      </div>
+      <div class="links">
+        <div><b>OVA publicada</b><span><a href="https://jncamilo20-art.github.io/OVA/">https://jncamilo20-art.github.io/OVA/</a></span></div>
+        <div><b>Repositorio</b><span><a href="https://github.com/jncamilo20-art/OVA">https://github.com/jncamilo20-art/OVA</a></span></div>
+        <div><b>Este documento</b><span>docs/Ficha_Tecnica_OVA_Entropia.pdf</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><small>Módulos</small><b>9</b><span>Interactivos e independientes</span></div>
+    <div class="stat"><small>Juegos</small><b>3</b><span>Propios en JavaScript</span></div>
+    <div class="stat"><small>Videos</small><b>3</b><span>En español, con pautas</span></div>
+    <div class="stat"><small>Quiz</small><b>5</b><span>Preguntas con retroalimentación</span></div>
+  </div>
+</section>
+
+<!-- ======================= PÁGINA 2 · TEMA Y OBJETIVOS ======================= -->
+<section class="page">
+  <svg class="waves waves-top" viewBox="0 0 300 150" preserveAspectRatio="none">
+    <path d="M80 0 C120 60 200 40 240 100 C260 130 290 140 300 150 V0 Z" fill="url(#gViolet)" opacity="0.85"/>
+    <path d="M150 0 C180 40 240 30 270 70 C285 90 295 100 300 105 V0 Z" fill="url(#gCyan)"/>
+  </svg>
+  <svg class="waves waves-corner" viewBox="0 0 330 200" preserveAspectRatio="none">
+    <path d="M0 200 C80 150 140 190 210 120 C260 70 300 90 330 40 V200 Z" fill="url(#gPink)" opacity="0.85"/>
+    <path d="M90 200 C150 170 200 190 250 140 C285 105 310 115 330 90 V200 Z" fill="url(#gCyan)"/>
+  </svg>
+
+  <div class="content">
+    <div class="running">Ficha técnica · <b>OVA Tema 19</b> · Ramírez Cáceres J. C.</div>
+
+    <div class="section">
+      <h2>Tema y autor</h2>
+      <div class="card">
+        <ul class="bullets">
+          <li><strong>Tema asignado</strong><span>N° 19 · Entropía y neguentropía en los sistemas.</span></li>
+          <li><strong>Autor</strong><span>Juan Camilo Ramírez Cáceres · estudiante de Ingeniería de Sistemas, asignatura Teoría General de Sistemas (TGS), docente Eddy Ramírez.</span></li>
+          <li><strong>Descripción breve</strong><span>Sitio web educativo (HTML, CSS y JavaScript) que explica cómo la entropía representa la tendencia natural de todo sistema al desgaste, el desorden y la incertidumbre, y cómo los sistemas abiertos importan neguentropía —energía, materia e información— desde su entorno para mantener su organización. El OVA relaciona la Segunda Ley de la Termodinámica con la TGS, la cibernética y la ingeniería de sistemas, y lo pone en práctica con un taller, misiones de decisión, tres juegos, videos y una prueba evaluativa.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Objetivo general</h2>
+      <div class="card">
+        Diseñar e implementar un Objeto Virtual de Aprendizaje (OVA) funcional, accesible y didáctico que permita comprender y enseñar la entropía y la neguentropía en los sistemas abiertos —Segunda Ley de la Termodinámica (ΔS &gt; 0) e información como neguentropía (I = −ΔS)— como tema específico de la Teoría General de Sistemas.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Objetivos específicos</h2>
+      <div class="card">
+        <ul class="bullets">
+          <li><strong>Investigar</strong><span>Sintetizar el marco conceptual (Segunda Ley, entropía negativa de Schrödinger, información de Shannon y Brillouin, homeostasis de Wiener, variedad requerida de Ashby y equifinalidad) a partir de fuentes académicas citadas en APA 7.</span></li>
+          <li><strong>Diseñar</strong><span>Aplicar principios de diseño instruccional y de experiencia de usuario: módulos independientes, identidad visual propia, navegación clara, accesibilidad y diseño adaptable a móviles.</span></li>
+          <li><strong>Desarrollar</strong><span>Construir contenidos interactivos que fomenten el aprendizaje activo: modelo E-P-S-R, taller de clasificación, misiones de decisión, tres juegos y una prueba con retroalimentación inmediata.</span></li>
+          <li><strong>Publicar</strong><span>Publicar el OVA en una plataforma web pública (GitHub Pages) y ofrecer una versión portable que funciona sin servidor.</span></li>
+          <li><strong>Sustentar</strong><span>Sustentar oralmente el proyecto, demostrando dominio del tema y del código desarrollado.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">02</div>
+</section>
+
+<!-- ========================= PÁGINA 3 · CONTENIDO ========================= -->
+<section class="page">
+  <svg class="waves waves-corner" viewBox="0 0 330 200" preserveAspectRatio="none">
+    <path d="M0 200 C80 150 140 190 210 120 C260 70 300 90 330 40 V200 Z" fill="url(#gViolet)" opacity="0.85"/>
+    <path d="M90 200 C150 170 200 190 250 140 C285 105 310 115 330 90 V200 Z" fill="url(#gCyan)"/>
+  </svg>
+
+  <div class="content">
+    <div class="running">Ficha técnica · <b>OVA Tema 19</b> · Ramírez Cáceres J. C.</div>
+    <h2>Contenido del OVA</h2>
+    <p class="lead">Elementos que componen el OVA y dónde se encuentran dentro del sitio:</p>
+
+    <div class="elements">
+      <div class="element"><div class="n">01</div><b>Contextualización</b><span>Inicio con la pregunta motivadora sobre la muerte térmica de los sistemas aislados, monitor interactivo del estado entrópico y neguentrópico, e índice de temas.</span></div>
+      <div class="element"><div class="n">02</div><b>Explicación teórica</b><span>Segunda Ley (ΔS &gt; 0), Schrödinger y la entropía negativa, información como neguentropía (I = −ΔS), termodinámica de sistemas abiertos, homeostasis (Wiener), variedad requerida (Ashby) y equifinalidad.</span></div>
+      <div class="element"><div class="n">03</div><b>Ejemplos reales</b><span>Comparación del estado entrópico frente al neguentrópico en empresas y organizaciones, sistemas biológicos e ingeniería de software.</span></div>
+      <div class="element"><div class="n">04</div><b>Ejercicios</b><span>Modelo E-P-S-R interactivo, taller de clasificación de fenómenos y misiones de mitigación con tres escenarios de decisión: entregas saturadas, eutrofización y cascada en microservicios.</span></div>
+      <div class="element"><div class="n">05</div><b>Juegos (3)</b><span>Clasificador de sistemas (30 segundos) · Simulador de entropía y neguentropía en tiempo real · Desafío de acoplamiento sistémico (5 retos).</span></div>
+      <div class="element"><div class="n">06</div><b>Videos</b><span>Tres videos en español incrustados desde YouTube, cada uno con su pauta de observación para relacionarlo con el modelo E-P-S-R.</span></div>
+      <div class="element"><div class="n">07</div><b>Evaluación</b><span>Prueba de 5 preguntas con retroalimentación inmediata y cálculo de desempeño; puntos XP de 0 a 1000, rangos e insignias desbloqueables.</span></div>
+      <div class="element"><div class="n">08</div><b>Diseño</b><span>Identidad visual propia (azul profundo con acentos cian, violeta y rosa), animaciones, asistente RoboTGS y modo Día Suave.</span></div>
+      <div class="element"><div class="n">09</div><b>Navegación</b><span>Página única por módulos: índice de temas, barra de módulos, avance al siguiente módulo, botón para volver al principio y diseño responsive.</span></div>
+      <div class="element"><div class="n">10</div><b>Accesibilidad y créditos</b><span>Modo oscuro / Día Suave, zoom tipográfico, narrador de voz en español, ficha técnica integrada, autoría y referencias en APA 7.</span></div>
+    </div>
+  </div>
+  <div class="page-num">03</div>
+</section>
+
+<!-- ===================== PÁGINA 4 · HERRAMIENTAS Y MÉTODO ===================== -->
+<section class="page">
+  <svg class="waves waves-corner" viewBox="0 0 330 200" preserveAspectRatio="none">
+    <path d="M0 200 C80 150 140 190 210 120 C260 70 300 90 330 40 V200 Z" fill="url(#gPink)" opacity="0.85"/>
+    <path d="M90 200 C150 170 200 190 250 140 C285 105 310 115 330 90 V200 Z" fill="url(#gCyan)"/>
+  </svg>
+
+  <div class="content">
+    <div class="running">Ficha técnica · <b>OVA Tema 19</b> · Ramírez Cáceres J. C.</div>
+    <h2 class="center">Herramientas<br>usadas</h2>
+
+    <div class="grid-2 section">
+      <div class="card tool">
+        <h3>Desarrollo web</h3>
+        <ul class="bullets">
+          <li>HTML5 semántico, CSS3 (variables, animaciones, <i>media queries</i>) y JavaScript ES6, sin <i>frameworks</i>.</li>
+          <li>Web Audio API: efectos de sonido sintetizados en el navegador.</li>
+          <li>Web Speech API: narrador de voz en español.</li>
+          <li>Almacenamiento local del navegador para recordar tema y tamaño de letra.</li>
+        </ul>
+      </div>
+      <div class="card tool">
+        <h3>Diseño visual</h3>
+        <ul class="bullets">
+          <li>Paleta propia en variables CSS: azul profundo con acentos cian, violeta y rosa.</li>
+          <li>Google Fonts: Plus Jakarta Sans (texto) y JetBrains Mono (datos y fórmulas).</li>
+          <li>Modo Día Suave de baja intensidad lumínica.</li>
+          <li>Logos institucionales de la Universidad Simón Bolívar e Ingeniería de Sistemas.</li>
+        </ul>
+      </div>
+      <div class="card tool">
+        <h3>Juegos y multimedia</h3>
+        <ul class="bullets">
+          <li>Juegos propios en JavaScript (3).</li>
+          <li>Simulador de neguentropía en tiempo real.</li>
+          <li>YouTube: videos en español incrustados.</li>
+          <li>Asistente RoboTGS de síntesis.</li>
+        </ul>
+      </div>
+      <div class="card tool">
+        <h3>Publicación y gestión</h3>
+        <ul class="bullets">
+          <li>Git y GitHub: control de versiones.</li>
+          <li>GitHub Pages: alojamiento del OVA.</li>
+          <li>OVA-Portable.html: copia en un solo archivo que funciona sin servidor.</li>
+          <li>Normas APA 7 para citas y referencias.</li>
+          <li>IA generativa como apoyo (ver declaración).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Metodología</h2>
+    <div class="card">
+      <ul class="bullets inline">
+        <li><strong>Análisis:</strong> <span>lectura de las orientaciones del proyecto y revisión de las fuentes de Bertalanffy, Schrödinger, Shannon, Brillouin, Wiener y Ashby; organización de las referencias en APA 7.</span></li>
+        <li><strong>Diseño instruccional:</strong> <span>secuencia de lo general a lo aplicado (contexto → modelo E-P-S-R → leyes → casos → decisiones → juegos → evaluación → síntesis), con retroalimentación inmediata en cada actividad.</span></li>
+        <li><strong>Diseño visual:</strong> <span>identidad propia trasladada a CSS con variables, modo Día Suave y adaptación a celular.</span></li>
+        <li><strong>Desarrollo:</strong> <span>código separado en estructura (HTML), estilos (CSS) y lógica (JavaScript), más una versión portable; pruebas en escritorio y móvil.</span></li>
+        <li><strong>Publicación y evaluación:</strong> <span>despliegue en GitHub Pages, verificación de enlaces y videos, y sustentación oral.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-num">04</div>
+</section>
+
+<!-- ===================== PÁGINA 5 · EVALUACIÓN E IA ===================== -->
+<section class="page">
+  <svg class="waves waves-top" viewBox="0 0 300 150" preserveAspectRatio="none">
+    <path d="M80 0 C120 60 200 40 240 100 C260 130 290 140 300 150 V0 Z" fill="url(#gPink)" opacity="0.85"/>
+    <path d="M150 0 C180 40 240 30 270 70 C285 90 295 100 300 105 V0 Z" fill="url(#gCyan)"/>
+  </svg>
+  <svg class="waves waves-corner" viewBox="0 0 330 200" preserveAspectRatio="none">
+    <path d="M0 200 C80 150 140 190 210 120 C260 70 300 90 330 40 V200 Z" fill="url(#gViolet)" opacity="0.85"/>
+    <path d="M90 200 C150 170 200 190 250 140 C285 105 310 115 330 90 V200 Z" fill="url(#gCyan)"/>
+  </svg>
+
+  <div class="content">
+    <div class="running">Ficha técnica · <b>OVA Tema 19</b> · Ramírez Cáceres J. C.</div>
+
+    <div class="section">
+      <h2>Criterios de evaluación</h2>
+      <div class="card">
+        <table>
+          <tr><th>Criterio</th><th>Evidencia en el OVA</th><th>Peso</th></tr>
+          <tr><td>Profundidad conceptual</td><td>Modelo E-P-S-R, leyes y principios con autores y fórmulas, casos reales y referencias en APA 7.</td><td>25 %</td></tr>
+          <tr><td>Interactividad</td><td>3 juegos, taller de clasificación, misiones de decisión y prueba con retroalimentación; puntos XP e insignias.</td><td>20 %</td></tr>
+          <tr><td>Diseño visual y creatividad</td><td>Identidad visual propia, animaciones, asistente RoboTGS y modo Día Suave.</td><td>15 %</td></tr>
+          <tr><td>Funcionalidad y navegación</td><td>Publicado en GitHub Pages, navegación por módulos, diseño responsive y versión portable.</td><td>15 %</td></tr>
+          <tr><td>Documentación</td><td>README.md, FICHA_TECNICA.md, esta ficha en PDF y ficha técnica integrada en el OVA.</td><td>5 %</td></tr>
+          <tr><td>Sustentación oral</td><td>Exposición del tema y del código desarrollado.</td><td>20 %</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Declaración de uso de IA</h2>
+      <div class="card">
+        <p>Se declara que se usaron herramientas de inteligencia artificial generativa, entre ellas <strong>Claude</strong> (Anthropic, 2026), como apoyo para estructurar y depurar el código (HTML, CSS y JavaScript), proponer redacciones, refinar el contenido pedagógico y preparar la documentación.</p>
+        <p>Todo el contenido fue revisado, contrastado con las fuentes citadas y ajustado por el autor, quien asume la responsabilidad de su exactitud y está en capacidad de explicarlo y defenderlo en la sustentación.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">05</div>
+</section>
+
+<!-- ===================== PÁGINA 6 · CRÉDITOS Y REFERENCIAS ===================== -->
+<section class="page">
+  <svg class="waves waves-corner" viewBox="0 0 330 200" preserveAspectRatio="none">
+    <path d="M0 200 C80 150 140 190 210 120 C260 70 300 90 330 40 V200 Z" fill="url(#gPink)" opacity="0.85"/>
+    <path d="M90 200 C150 170 200 190 250 140 C285 105 310 115 330 90 V200 Z" fill="url(#gCyan)"/>
+  </svg>
+
+  <div class="content">
+    <div class="running">Ficha técnica · <b>OVA Tema 19</b> · Ramírez Cáceres J. C.</div>
+
+    <div class="section">
+      <h2>Créditos</h2>
+      <div class="card">
+        <ul class="bullets inline">
+          <li><strong>Autoría, contenido y diseño:</strong> <span>Juan Camilo Ramírez Cáceres.</span></li>
+          <li><strong>Docente:</strong> <span>Eddy Ramírez · Teoría General de Sistemas, Universidad Simón Bolívar, Campus Cúcuta.</span></li>
+          <li><strong>Teoría:</strong> <span>Ludwig von Bertalanffy, Erwin Schrödinger, Claude Shannon, Léon Brillouin, Norbert Wiener y W. Ross Ashby; demás autores citados en las referencias.</span></li>
+          <li><strong>Videos:</strong> <span>pertenecen a sus canales y autores; se incrustan desde YouTube con fines educativos, sin modificación.</span></li>
+          <li><strong>Recursos:</strong> <span>fuentes tipográficas de Google Fonts (licencia SIL Open Font License); logos institucionales de la Universidad Simón Bolívar.</span></li>
+        </ul>
+        <div class="note">Las citas y referencias siguen las normas APA 7.ª edición, con un único estilo de citación y datos verificados (DOI o URL cuando existen).</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Referencias</h2>
+      <div class="card refs">
+        <p>Anthropic. (2026). <i>Claude</i> [Modelo de lenguaje de gran tamaño]. <a href="https://claude.ai">https://claude.ai</a></p>
+        <p>Ashby, W. R. (1956). <i>An introduction to cybernetics</i>. Chapman &amp; Hall.</p>
+        <p>Bertalanffy, L. von. (1968). <i>General system theory: Foundations, development, applications</i>. George Braziller.</p>
+        <p>Brillouin, L. (1956). <i>Science and information theory</i>. Academic Press.</p>
+        <p>Schrödinger, E. (1944). <i>What is life? The physical aspect of the living cell</i>. Cambridge University Press.</p>
+        <p>Shannon, C. E. (1948). A mathematical theory of communication. <i>Bell System Technical Journal, 27</i>(3), 379–423. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a></p>
+        <p>Wiener, N. (1948). <i>Cybernetics: Or control and communication in the animal and the machine</i>. MIT Press.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">06</div>
+</section>
+
+</body>
+</html>
